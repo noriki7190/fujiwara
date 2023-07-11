@@ -1,0 +1,12 @@
+@use '../global' as g;
+
+.p-access {
+  @include g.font(12, 20, 400);
+}
+
+.p-access__head {
+}
+
+.p-access__info {
+  margin-top: 4px;
+}

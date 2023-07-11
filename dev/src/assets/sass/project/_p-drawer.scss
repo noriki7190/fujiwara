@@ -1,0 +1,78 @@
+@use '../global' as g;
+
+.p-drawer {
+  position: fixed;
+  background: #D9E3DD;
+  height: 100%;
+  width: 100%;
+  z-index: #{map-get(g.$layer, drawer)};
+  top: 0;
+  left: 0;
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.p-drawer__bg {}
+
+.p-drawer__body {
+  padding: 30px;
+}
+
+.p-drawer__nav {
+  margin-top: 96px;
+}
+
+.p-drawer-nav__list {}
+
+.p-drawer-nav__item {
+  padding: 16px 0;
+  border-bottom: 1px solid #CBCBCB;
+
+  &--work {
+    display: grid;
+    gap: 17px;
+  }
+}
+
+.p-drawer-nav__link {
+  @include g.font(18, 20, 700);
+  text-transform: uppercase;
+}
+
+.p-drawer-nav__child {
+  display: flex;
+  align-items: center;
+  @include g.font(14, 19, 400);
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 1px;
+    background: g.$c-text;
+    margin-right: 14px;
+  }
+}
+
+.p-drawer__btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+.p-drawer__access {
+  margin-top: 56px;
+}
+
+.p-drawer__privacy {
+  @include g.font(12, 14, 400);
+  margin-top: 63px;
+}
+
+.p-drawer__copyright {
+  @include g.font(12, 14, 400);
+  margin-top: 12px;
+}

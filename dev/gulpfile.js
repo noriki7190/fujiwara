@@ -29,13 +29,15 @@ const srcPath = {
   'sass': srcBase + '/assets/sass/**/*.scss',
   // 'js': srcBase + '/assets/js/**/*.js',
   'js': './src/assets/js/**/*.js',
-  'html': srcBase + '/**/*.html'
+  'html': srcBase + '/**/*.html',
+  'img': srcBase + '/assets/img/**/*'
 };
 
 const distPath = {
   'css': distBase + '/assets/css/',
   'js': distBase + '/assets/js/',
-  'html': distBase + '/'
+  'html': distBase + '/',
+  'img': distBase + '/assets/img/'
 };
 
 /**
@@ -125,6 +127,11 @@ const minJS = () => {
     .pipe(gulp.dest(distPath.js))
 }
 
+const copyImg = () => {
+  return gulp.src(srcPath.img)
+    .pipe(gulp.dest(distPath.img))
+}
+
 // テスト用
 const test = (done) => {
   console.log("Hello Gulp");
@@ -142,4 +149,7 @@ exports.default = gulp.series(
 
 exports.test = test;
 exports.compileSass = compileSass;
-exports.minJS = minJS
+exports.minJS = minJS;
+exports.copyImg = copyImg;
+
+exports.build = gulp.parallel(minJS, compileSass, copyImg);

@@ -1,0 +1,65 @@
+@use '../global' as g;
+
+.p-drawer-icon {
+  position: fixed;
+  top: 23px;
+  right: 23px;
+  z-index: #{map-get(g.$layer, drawer-icon)};
+  display: block;
+  height: 24px;
+  width: 30px;
+
+  @include g.mq(pc) {
+    display: none;
+  }
+}
+
+.p-drawer-btn__inline {
+  width: 22.5px;
+  height: 2px;
+  background: #000;
+  display: block;
+
+  &::after,
+  &::before {
+    content: '';
+    height: 2px;
+    background: #000;
+    display: block;
+    position: absolute;
+  }
+
+  &::before {
+    width: 30px;
+    top: 0;
+  }
+
+  &::after {
+    width: 30px;
+    bottom: 0;
+    transform: scale(0.5, 1);
+    transform-origin: left;
+  }
+}
+
+// is-open
+.p-drawer-icon {
+  &.is-open {
+    .p-drawer-btn__inline {
+      // transform: rotate(-45deg);
+      // background: transparent;
+      background: 0;
+      &::before {
+        transform-origin: left;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: scale(1, 1);
+        transform: rotate(-45deg);
+        transform-origin: left;
+        // width: 30px;
+      }
+    }
+  }
+}

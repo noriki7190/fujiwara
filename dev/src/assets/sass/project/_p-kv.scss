@@ -1,0 +1,59 @@
+@use '../global' as g;
+
+.p-kv {
+  position: relative;
+}
+
+.p-kv__catch-copy {
+  margin-top: 16px;
+  margin-left: 20px;
+}
+
+.p-kv__lead {
+  @include g.font(48, 53, 700);
+  letter-spacing: .05em;
+}
+
+.p-kv__text {
+  @include g.font(16, 36, 700);
+  letter-spacing: .15em;
+  font-family: g.$ff-jp;
+  margin-top: 23px;
+}
+
+.p-kv__slider {}
+
+.p-kv__business {
+  color: g.$c-primary;
+  @include g.font(32, 36, 700);
+  padding-top: 270px;
+  margin-left: 24px;
+
+  @include g.mq(tab) {
+    @include g.font(80, 89, 700);
+    padding-top: 337px;
+  }
+}
+
+.p-kv__img {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: -1;
+  width: calc(310 / 390 * 100%);
+  
+
+  img {
+    height: 600px;
+    object-fit: cover;
+  }
+
+  @include g.mq(tab) {
+    top: 0;
+    width: calc(1060 / 1440 * 100%);
+
+    img {
+      height: 100vh;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,122 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  
+
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Document</title>
+  <title>藤原建設工業 | 架空の建設会社</title>
+
+  <meta name="description" content="架空の建設会社 デザインカンプからのコーディング">
 </head>
+
 <body>
   <header class="l-header">
     <div class="p-header">
-      <h1 class="p-header__log">logo</h1><!-- /.p-header__log -->
+      <h1 class="p-header__logo"><a href="/"><img src="./assets/img/logo.png" alt="fuji construction industry"></a></h1>
+      <!-- /.p-header__logo -->
 
-      <nav class="p-header__nav p-global-nav">
-        <ul class="p-global-nav__list">
-          <li class="p-global-nav__item">
-            <a href="#" class="p-global-nav__link">news</a><!-- /.p-global-nav__link -->
-          </li><!-- /.p-global-nav__item -->
-          <li class="p-global-nav__item">
-            <a href="#" class="p-global-nav__link">concept</a><!-- /.p-global-nav__link -->
-          </li><!-- /.p-global-nav__item -->
-          <li class="p-global-nav__item">
-            <a href="#" class="p-global-nav__link">contact</a><!-- /.p-global-nav__link -->
-          </li><!-- /.p-global-nav__item -->
-        </ul><!-- /.p-global-nav__list -->
-      </nav><!-- /.p-header__nav -->
+      <div class="p-header__right">
+        <nav class="p-header__nav p-global-nav">
+          <ul class="p-global-nav__list">
+            <li class="p-global-nav__item">
+              <a href="/top" class="p-global-nav__link">top</a><!-- /.p-global-nav__link -->
+            </li><!-- /.p-global-nav__item -->
+            <li class="p-global-nav__item">
+              <a href="" class="p-global-nav__link">company</a><!-- /.p-global-nav__link -->
+            </li><!-- /.p-global-nav__item -->
+            <li class="p-global-nav__item">
+              <a href="" class="p-global-nav__link">service</a><!-- /.p-global-nav__link -->
+            </li><!-- /.p-global-nav__item -->
+            <li class="p-global-nav__item">
+              <a href="" class="p-global-nav__link">works</a><!-- /.p-global-nav__link -->
+            </li><!-- /.p-global-nav__item -->
+            <li class="p-global-nav__item">
+              <a href="" class="p-global-nav__link">news</a><!-- /.p-global-nav__link -->
+            </li><!-- /.p-global-nav__item -->
+          </ul><!-- /.p-global-nav__list -->
+        </nav><!-- /.p-header__nav -->
+
+        <div class="p-header__btns">
+          <div class="c-nav-btn">
+            <a href="" class="c-nav-btn__link">recruit</a><!-- /.p-nav__btn -->
+          </div><!-- /.c-nav-btn -->
+          <div class="c-nav-btn c-nav-btn--secondary">
+            <a href="" class="c-nav-btn__link">contact</a><!-- /.p-nav__btn -->
+          </div><!-- /.p-header-btn -->
+        </div><!-- /.p-header__btns -->
+      </div><!-- /.p-header__right -->
+
+      <div class="p-drawer-icon ">
+        <button class="p-drawer-btn" id="js-drawer-icon">
+          <span class="p-drawer-btn__inline"></span>
+        </button><!-- /.p-burger-icon -->
+      </div><!-- /.p-drawer-icon -->
+      <div class="p-drawer" id="js-drawer">
+        <div class="p-drawer__bg"></div><!-- /.p-drawer__bg -->
+        <div class="p-drawer__body">
+          <nav class="p-drawer__nav">
+            <ul class="p-drawer-nav__list">
+              <li class="p-drawer-nav__item">
+                <a href="/top" class="p-drawer-nav__link">top</a><!-- /.p-drawer-nav__link -->
+              </li><!-- /.p-drawer-nav__item -->
+              <li class="p-drawer-nav__item">
+                <a href="" class="p-drawer-nav__link">company</a><!-- /.p-drawer-nav__link -->
+              </li><!-- /.p-drawer-nav__item -->
+              <li class="p-drawer-nav__item">
+                <a href="" class="p-drawer-nav__link">service</a><!-- /.p-drawer-nav__link -->
+              </li><!-- /.p-drawer-nav__item -->
+              <li class="p-drawer-nav__item p-drawer-nav__item--work">
+                <a href="" class="p-drawer-nav__link">works</a><!-- /.p-drawer-nav__link -->
+                <a href="" class="p-drawer-nav__child">建築事業</a><!-- /.p-drawer-nav__child -->
+                <a href="" class="p-drawer-nav__child">土木事業</a><!-- /.p-drawer-nav__child -->
+                <a href="" class="p-drawer-nav__child">住宅事業</a><!-- /.p-drawer-nav__child -->
+              </li><!-- /.p-drawer-nav__item -->
+              <li class="p-drawer-nav__item">
+                <a href="" class="p-drawer-nav__link">news</a><!-- /.p-drawer-nav__link -->
+              </li><!-- /.p-drawer-nav__item -->
+            </ul><!-- /.p-drawer-nav__list -->
+
+            <div class="p-drawer__btns">
+              <div class="c-nav-btn">
+                <a href="" class="c-nav-btn__link">recruit</a><!-- /.p-nav__btn -->
+              </div><!-- /.c-nav-btn -->
+              <div class="c-nav-btn c-nav-btn--secondary">
+                <a href="" class="c-nav-btn__link">contact</a><!-- /.p-nav__btn -->
+              </div><!-- /.p-header-btn -->
+            </div><!-- /.p-drawer__btns -->
+          </nav><!-- /.p-drawer__nav -->
+
+          <address class="p-drawer__access p-access">
+            <p class="p-access__head">Access</p><!-- /.p-drawer__access -->
+            <p class="p-access__info">
+              藤原建設工業株式会社 本社<br>〒000-0000 千葉県◯◯市◯◯丁目◯◯番<br>TEL 00-0000-0000
+            </p><!-- /.p-drawer__info -->
+          </address><!-- /.p-access -->
+
+          <!-- TODO: リンクにする？ -->
+          <div class="p-drawer__privacy">Privacy Policy</div><!-- /.p-drawer__privacy -->
+          <small class="p-drawer__copyright">© 1995 Fujiwara Construction Industry. Co., Ltd.</small>
+        </div><!-- /.p-drawer__body -->
+      </div><!-- /.p-drawer -->
     </div><!-- /.p-header -->
+
+
+    <div class="p-header__kv">
+      <div class="p-kv">
+        <div class="l-inner">
+          <!-- slider -->
+          <div class="p-kv__slider">
+            <p class="p-kv__business">Architecture</p><!-- /.p-kv__business -->
+            <figure class="p-kv__img"><img src="./assets/img/kv_slider01.png" alt=""></figure><!-- /.p-kv__img -->
+          </div><!-- /.p-kv__slider -->
+          <div class="p-kv__catch-copy">
+            <p class="p-kv__lead">How Far<br>Can<br class="u-is-sp">We Go?</p><!-- /.p-kv__catch -->
+            <p class="p-kv__text">「どこまでいけるか」<br>お客さまと挑戦し続ける未来を<br class="u-is-sp">築いていきます。</p><!-- /.p-kv__text -->
+          </div><!-- /.p-kv__catch-copy -->
+        </div><!-- /.l-inner -->
+      </div><!-- /.p-kv -->
+    </div><!-- /.p-header__kv -->
   </header><!-- /.l-header -->
-  <h2 class="c-title">gulp test</h2>
 </body>
+
 </html>

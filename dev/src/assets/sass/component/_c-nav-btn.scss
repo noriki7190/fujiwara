@@ -1,0 +1,22 @@
+@use '../global' as g;
+
+.c-nav-btn {
+  text-align: center;
+  color: #fff;
+  @include g.font(18, 18, 700);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.c-nav-btn--secondary {
+  &>.c-nav-btn__link {
+    background: g.$c-tertiary;
+  }
+}
+
+.c-nav-btn__link {
+  padding: 20px 18px;
+  display: inline-block;
+  width: 140px;
+  background: #111;
+}
