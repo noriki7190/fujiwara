@@ -143,7 +143,7 @@ const test = (done) => {
  * parallelは並列で実行
  */
 exports.default = gulp.series(
-  gulp.parallel(html, compileSass, minJS),
+  gulp.parallel(html, compileSass, minJS, copyImg),
   gulp.parallel(watchFiles, browserSyncFunc)
 );
 

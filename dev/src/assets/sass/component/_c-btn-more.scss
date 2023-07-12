@@ -1,0 +1,39 @@
+@use '../global' as g;
+
+.c-btn-more {
+  letter-spacing: .15em;
+  color: g.$c-primary;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 12px 0 12px 0;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid g.$c-primary;
+    border-radius: 50%;
+    position: absolute;
+    // top: 0;
+    right: 0;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 6.5px;
+    height: 6.5px;
+    border-bottom: 1px solid g.$c-primary;
+    border-right: 1px solid g.$c-primary;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 20px;
+  }
+
+  @include g.mq(tab) {
+    @include g.font(15, 17, 400);
+  }
+}

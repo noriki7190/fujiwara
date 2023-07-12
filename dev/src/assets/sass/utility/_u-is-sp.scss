@@ -1,0 +1,7 @@
+@use '../global' as g;
+
+.u-is-sp {
+  @include g.mq(tab) {
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+@use '../global' as g;
+
+.p-sect-body {
+
+}
+
+.p-sect-body__text {
+  @include g.font(15, 28, 400);
+  letter-spacing: .15em;
+  font-family: g.$ff-jp;
+  margin-top: 30px;
+}
+
+.p-sect-body__link {
+  margin-top: 30px;
+  // margin-left: auto;
+  text-align: center;
+}
