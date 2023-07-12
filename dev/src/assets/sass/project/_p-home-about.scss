@@ -8,6 +8,7 @@
   @include g.mq(tab) {
     display: flex;
     justify-content: space-between;
+    gap: 80px;
   }
 }
 
@@ -38,7 +39,7 @@
   padding-bottom: 40px;
 
   @include g.mq(tab) {
-    flex: 0 0 355px;
+    flex: 0 0 auto;
     padding-top: 141px;
   }
 }

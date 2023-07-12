@@ -36,4 +36,17 @@
   @include g.mq(tab) {
     @include g.font(15, 17, 400);
   }
+
+  &--light {
+    color: #fff;
+
+    &::before {
+      border: 1px solid #fff;
+    }
+
+    &::after {
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+    }
+  }
 }

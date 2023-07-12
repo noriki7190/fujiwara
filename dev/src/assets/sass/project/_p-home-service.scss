@@ -1,0 +1,20 @@
+@use '../global' as g;
+
+.p-home-service {
+
+}
+
+.p-home-service__inner {
+  @include g.mq(tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-home-service__body {
+
+}
+
+.p-home-service__bg {
+
+}

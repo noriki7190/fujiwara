@@ -1,0 +1,54 @@
+@use '../global' as g;
+
+.p-home-service-business {}
+
+.p-home-service-business__list {}
+
+.p-home-service-business__item {
+  
+}
+
+.p-home-service-business__img {}
+
+.p-home-service-business__title {
+  @include g.font(28, 31, 700);
+  span {
+    @include g.font(13, 17, 500);
+    margin-top: 7px;
+    display: block;
+    font-family: g.$ff-jp;
+  }
+
+  @include g.mq(tab) {
+    @include g.font(36, 41, 700);
+    span {
+      @include g.font(16, 21, 500);
+      margin-top: 8px;
+    }
+  }
+}
+
+.p-home-service-business__link {
+  width: 185px;
+  height: 80px;
+  background: g.$c-primary;
+  display: grid;
+  place-items: center;
+
+
+}
+
+// ボタン周りの色違い
+.p-home-service-business__item {
+  &:nth-child(2) {
+    .p-home-service-business__link {
+      background: g.$c-tertiary;
+    }
+  }
+
+  &:nth-of-type(3) {
+    .p-home-service-business__link {
+      background: g.$c-secondary;
+    }
+  }
+}
