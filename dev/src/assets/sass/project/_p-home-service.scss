@@ -1,7 +1,12 @@
 @use '../global' as g;
 
 .p-home-service {
-
+  margin-top: 72px;
+  padding-bottom: 122px;
+  
+  @include g.mq(tab) {
+    margin-top: 260px;
+  }
 }
 
 .p-home-service__inner {
@@ -11,10 +16,19 @@
   }
 }
 
-.p-home-service__body {
-
+.p-home-service__container {
+  // position: relative;
+  padding-bottom: 80px;
 }
 
-.p-home-service__bg {
+.p-home-service__body {
+  @include g.mq(tab) {
+    margin-right: 80px;
+    position: sticky;
+    top: 40px;
+  }
+}
 
+.p-home-service__slider {
+  margin-top: 112px;
 }

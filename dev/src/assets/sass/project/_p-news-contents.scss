@@ -1,0 +1,50 @@
+@use '../global' as g;
+
+.p-news-contents {}
+
+.p-news-contents__list {}
+
+.p-news-contents__item {
+  border-bottom: 1px solid #CBCBCB;
+
+  &+& {
+    margin-top: 32px;
+  }
+}
+
+.p-news-contents__link {
+  @include g.mq(tab) {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.p-news-contents__img {
+
+  @include g.mq(tab) {
+    flex: 0 0 186px;
+  }
+}
+
+.p-news-contents__body {
+  margin-top: 28px;
+  padding-bottom: 28px;
+}
+
+.p-news-contents__date {
+  @include g.font(12, 14, 400);
+}
+
+.p-news-contents__label {
+  display: inline-block;
+  padding: 6px 20px 6px 12px;
+  border: 1px solid #333;
+  @include g.font(12, 16, 400);
+  font-family: g.$ff-jp;
+  margin-left: 24px;
+}
+
+.p-news-contents__ttl {
+  @include g.font(14, 32, 500);
+  margin-top: 16px;
+}
