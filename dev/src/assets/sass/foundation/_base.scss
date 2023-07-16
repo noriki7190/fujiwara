@@ -13,6 +13,7 @@ body {
 img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 iframe {
@@ -21,10 +22,14 @@ iframe {
 
 a {
   color: inherit;
-  transition: .3s;
+  // transition: .3s;
   cursor: pointer;
 
   &:hover {
     // opacity: .7;
   }
+}
+
+* {
+  // transition: .3s all ease;
 }

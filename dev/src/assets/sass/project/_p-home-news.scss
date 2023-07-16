@@ -16,8 +16,11 @@
 }
 
 .p-home-news__link {
-  margin-left: auto;
   margin-top: 32px;
+
+  .c-btn-more {
+    margin-left: auto;
+  }
 
   @include g.mq(tab) {
       margin-top: 40px;
