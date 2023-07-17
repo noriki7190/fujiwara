@@ -4,21 +4,35 @@
   background: g.$c-bg;
   padding-top: 140px;
   padding-bottom: 147px;
-}
+  position: relative;
 
-.p-home-recruit__body {
-  display: grid;
-  
-  @include g.mq(tab) {
+  &::after {
+    content: 'GET IN TOUCH';
+    display: block;
+    @include g.font(180, 201, 700);
+    position: absolute;
+    bottom: -15px;
+    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+
+  }
+
+  .p-home-recruit__body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 
-  &.p-sect-body {
-    max-width: 100%;
-  }
+    @include g.mq(tab) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-  .p-sect-body__link {
-    grid-area: 2 / 2 / 3 / 3;
+    &.p-sect-body {
+      max-width: 100%;
+    }
+
+    .p-sect-body__link {
+      grid-area: 2 / 2 / 3 / 3;
+      z-index: 2;
+    }
   }
 }
