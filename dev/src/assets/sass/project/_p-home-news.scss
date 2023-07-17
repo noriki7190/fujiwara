@@ -1,14 +1,16 @@
 @use '../global' as g;
 
 .p-home-news {
-  margin-top: 140px;
+  padding: 140px;
   padding-bottom: 112px;
+  background: #fff;
 }
 
 .p-home-news__contents {
   margin-top: 28px;
   max-width: 690px;
   margin: auto;
+
 
   @include g.mq(tab) {
     margin-top: 41px;
@@ -23,6 +25,6 @@
   }
 
   @include g.mq(tab) {
-      margin-top: 40px;
-    }
+    margin-top: 40px;
+  }
 }

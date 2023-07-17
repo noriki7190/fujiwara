@@ -3,6 +3,7 @@
 .p-home-service-business {
   margin-top: 40px;
   position: relative;
+  z-index: 2;
 
   @include g.mq(tab) {
     margin-top: 0;

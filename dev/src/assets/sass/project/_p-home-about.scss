@@ -2,6 +2,12 @@
 
 .p-home-about {
   position: relative;
+  background: #fff;
+  padding-bottom: 72px;
+
+  @include g.mq(tab) {
+    padding-bottom: 272px;
+  }
 }
 
 .p-home-about__inner {
@@ -13,6 +19,8 @@
 }
 
 .p-home-about__img {
+  position: relative;
+  z-index: 2;
 
   @include g.mq(sp) {
     margin: 0 -20px;
@@ -37,6 +45,8 @@
 .p-home-about__body {
   padding-top: 64px;
   padding-bottom: 40px;
+  z-index: 2;
+  position: relative;
 
   @include g.mq(tab) {
     flex: 0 0 auto;
@@ -47,7 +57,7 @@
 .p-home-about__bg {
   background: g.$c-bg;
   position: absolute;
-  z-index: -1;
+  // z-index: -1;
   top: 0;
   right: 0;
   width: 100%;

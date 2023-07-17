@@ -2,21 +2,39 @@
 
 .c-nav-btn {
   text-align: center;
-  color: #fff;
-  @include g.font(18, 18, 700);
+
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
-.c-nav-btn--secondary {
-  &>.c-nav-btn__link {
-    background: g.$c-tertiary;
-  }
-}
+
 
 .c-nav-btn__link {
   padding: 20px 18px;
   display: inline-block;
   width: 140px;
   background: #111;
+  border: 2px solid #111;
+  color: #fff;
+  @include g.font(18, 18, 700);
+  transition: .3s ease;
+
+  &:hover {
+    background: #fff;
+    color: #111;
+    transition: .3s ease;
+  }
+}
+
+.c-nav-btn--secondary {
+  .c-nav-btn__link {
+    background: g.$c-tertiary;
+    border: 2px solid g.$c-tertiary;
+
+    &:hover {
+      color: g.$c-tertiary;
+      background: #fff;
+      opacity: .3s ease;
+    }
+  }
 }

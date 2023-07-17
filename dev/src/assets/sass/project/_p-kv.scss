@@ -5,6 +5,11 @@
   padding-top: 270px;
   padding-bottom: 145px;
 
+  
+  background: #fff;
+  z-index: 10;
+
+
   @include g.mq(tab) {
     height: 100vh;
     padding-top: 337px;

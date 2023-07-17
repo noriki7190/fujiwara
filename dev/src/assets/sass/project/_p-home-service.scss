@@ -1,11 +1,12 @@
 @use '../global' as g;
 
 .p-home-service {
-  margin-top: 72px;
+  padding-top: 72px;
   padding-bottom: 122px;
-  
+  background: #fff;
+
   @include g.mq(tab) {
-    margin-top: 260px;
+    padding-top: 260px;
   }
 }
 
