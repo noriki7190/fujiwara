@@ -1,0 +1,24 @@
+@use '../global' as g;
+
+.p-home-recruit {
+  background: g.$c-bg;
+  padding-top: 140px;
+  padding-bottom: 147px;
+}
+
+.p-home-recruit__body {
+  display: grid;
+  
+  @include g.mq(tab) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &.p-sect-body {
+    max-width: 100%;
+  }
+
+  .p-sect-body__link {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
