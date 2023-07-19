@@ -2,11 +2,22 @@
 
 .p-home-service {
   padding-top: 72px;
-  padding-bottom: 122px;
-  background: #fff;
+  padding-bottom: 112px;
+  position: relative;
 
   @include g.mq(tab) {
     padding-top: 260px;
+  }
+
+  &::after {
+    content: '';
+    width: calc(50vw + 40px);
+    height: 1391px;
+    background: g.$c-bg;
+    position: absolute;
+    top: 396px;
+    right: 0;
+    z-index: -2;
   }
 }
 
@@ -26,10 +37,10 @@
   @include g.mq(tab) {
     margin-right: 80px;
     position: sticky;
-    top: 40px;
+    top: 272px;
   }
 }
 
-.p-home-service__slider {
+.p-home-service__loop-slide {
   margin-top: 112px;
 }

@@ -4,5 +4,12 @@
   max-width: g.$inner-width;
   width: 100%;
   margin: auto;
-  padding: 0 g.$inner-padding;
+  padding-left: g.$inner-padding;
+  padding-right: g.$inner-padding;
+  box-sizing: content-box;
+
+  @include g.mq(tab) {
+    padding-left: g.$inner-padding-pc;
+    padding-right: g.$inner-padding-pc;
+  }
 }

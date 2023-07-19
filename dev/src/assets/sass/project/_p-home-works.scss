@@ -1,0 +1,54 @@
+@use '../global' as g;
+
+.p-home-works {
+  background: #fff;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.p-home-works__inner {
+  padding-top: 68px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    content: '';
+    display: block;
+    background: g.$c-bg;
+    width: calc(100vw);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    z-index: -1;
+  }
+}
+
+.p-home-works-slider__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  // height: 36px;
+}
+
+.p-home-works__btn {
+  margin-top: 81px;
+}
+
+.p-home-works__link {
+  margin-left: auto;
+}
+
+.p-home-work__copy {
+  @include g.font(180, 201, 700);
+  position: absolute;
+  bottom: -15px;
+  text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}

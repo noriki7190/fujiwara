@@ -5,18 +5,7 @@
   padding-top: 140px;
   padding-bottom: 147px;
   position: relative;
-
-  &::after {
-    content: 'GET IN TOUCH';
-    display: block;
-    @include g.font(180, 201, 700);
-    position: absolute;
-    bottom: -15px;
-    text-stroke: 1px #fff;
-    -webkit-text-stroke: 1px #fff;
-    color: transparent;
-
-  }
+  overflow: hidden;
 
   .p-home-recruit__body {
     display: grid;
@@ -36,3 +25,15 @@
     }
   }
 }
+
+.p-home-recruit__copy {
+  @include g.font(180, 201, 700);
+  position: absolute;
+  bottom: -15px;
+  text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+

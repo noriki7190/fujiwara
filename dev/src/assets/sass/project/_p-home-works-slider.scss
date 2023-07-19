@@ -1,0 +1,54 @@
+@use '../global' as g;
+
+.p-home-works-slider {
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  margin-top: 41px;
+  &.swiper {
+    overflow: visible;
+  }
+}
+
+
+.p-home-works-slider__item {
+  // width: 360px;
+  // margin-right: 40px;
+  // padding-right: 40px;
+}
+
+.p-home-works-slider__img {
+  // width: 360px;
+
+  img {
+    width: 360px;
+    height: 270px;
+  }
+}
+
+.p-home-works-slider__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.p-home-works-slider__name {
+  @include g.font(16, 24, 700);
+  letter-spacing: .15em;
+}
+
+.p-home-works-slider__date {
+  @include g.font(16, 17, 700);
+}
+
+.p-home-works-slider__pagination {
+  position: absolute;
+  top: 0;
+}
+
+.p-home-slider__btn {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

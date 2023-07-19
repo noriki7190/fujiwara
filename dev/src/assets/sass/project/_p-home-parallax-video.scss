@@ -2,6 +2,8 @@
 
 .p-home-parallax-movie {
   height: 245px;
+  background: #888;
+  overflow: hidden;
 
   @include g.mq(tab) {
     height: 435px;

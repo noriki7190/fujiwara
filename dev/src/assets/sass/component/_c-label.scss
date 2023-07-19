@@ -1,0 +1,9 @@
+@use '../global' as g;
+
+.c-label {
+  background: g.$c-primary;
+  padding: .833em .3em;
+  color: #fff;
+ @include g.font(12, 16, 700);
+  min-width: 80px;
+  text-align: center;}

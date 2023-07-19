@@ -1,20 +1,23 @@
 @use '../global' as g;
 
 .p-header {
+  width: 100%;
+  position: fixed;
+  z-index: #{map-get(g.$layer, header)};
+  top: 0;
+}
+
+.p-header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: calc(1360px + 40px * 2);
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px 20px 0;
-  position: absolute;
-  z-index: #{map-get(g.$layer, header)};
-  top: 0;
-
 
   @include g.mq(tab) {
-     padding: 40px 40px 0;
+    padding: 40px 40px 0;
   }
 }
 

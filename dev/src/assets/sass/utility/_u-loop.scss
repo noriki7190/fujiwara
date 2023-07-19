@@ -1,0 +1,16 @@
+@use '../global' as g;
+
+.u-loop {
+  width: 100vw;
+  animation: loop-text 20s linear  infinite;
+}
+
+@keyframes loop-text {
+  0% {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

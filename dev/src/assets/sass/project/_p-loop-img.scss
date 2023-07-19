@@ -1,0 +1,39 @@
+@use '../global' as g;
+
+.p-loop-img {
+  display: flex;
+  // width: 100vw;
+  overflow: hidden;
+}
+
+.p-loop-img__list {
+  height: 280px;
+  padding: 0;
+  display: flex;
+  animation: loop-list 50s linear infinite;
+
+
+}
+
+.p-loop-img__item {
+  padding-left: 40px;
+
+  img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@keyframes loop-list {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.loop02:hover .loop02__box {
+  animation-play-state: paused;
+}

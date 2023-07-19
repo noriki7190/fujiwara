@@ -3,7 +3,8 @@
 .p-home-service-business {
   margin-top: 40px;
   position: relative;
-  z-index: 2;
+  // z-index: 2;
+  // overflow: hidden;
 
   @include g.mq(tab) {
     margin-top: 0;
@@ -25,6 +26,10 @@
 
   &+& {
     margin-top: 40px;
+
+    @include g.mq(tab) {
+      margin-top: 80px;
+    }
   }
 }
 
@@ -101,16 +106,17 @@
 }
 
 .p-home-service-business__bg {
-  background: g.$c-bg;
-  position: absolute;
-  z-index: -2;
+  // background: g.$c-bg;
+  // position: absolute;
+  // z-index: -2;
 
 
-  @include g.mq(tab) {
-    top: 124px;
-    left: -80px;
-    // margin-right: calc(50% - 50vw);
-    height: 100%;
-    width: calc(50vw + 60px);
-  }
+  // @include g.mq(tab) {
+  //   top: 124px;
+  //   left: -80px;
+  //   // margin-right: calc(50% - 50vw);
+  //   height: calc(100% - 120px);
+  //   // width: calc(50vw + 51px);
+  //   width: 100%;
+  // }
 }
