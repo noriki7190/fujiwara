@@ -8,7 +8,6 @@
   overflow: hidden;
 
   .p-home-recruit__body {
-    display: grid;
 
     @include g.mq(tab) {
       display: grid;

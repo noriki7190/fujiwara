@@ -6,7 +6,7 @@
   margin: auto;
   padding-left: g.$inner-padding;
   padding-right: g.$inner-padding;
-  box-sizing: content-box;
+  // box-sizing: content-box;
 
   @include g.mq(tab) {
     padding-left: g.$inner-padding-pc;

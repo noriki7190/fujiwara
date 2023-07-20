@@ -9,11 +9,19 @@
   }
 }
 
+.p-home-works-slider__contents {
+  cursor: url(../img/home/cursor_drag.png), pointer;
+}
+
 
 .p-home-works-slider__item {
   // width: 360px;
   // margin-right: 40px;
   // padding-right: 40px;
+}
+
+.p-home-works-slider__link {
+  cursor: url(../img/home/cursor_drag.png), pointer;
 }
 
 .p-home-works-slider__img {
@@ -43,12 +51,14 @@
 
 .p-home-works-slider__pagination {
   position: absolute;
-  top: 0;
+  top: -40px;
+  left: -100px;
+  height: 20px;
 }
 
 .p-home-slider__btn {
-  width: 300px;
+  width: 122px;
   position: absolute;
-  top: 0;
+  top: -40px;
   right: 0;
 }

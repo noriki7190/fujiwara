@@ -1,7 +1,10 @@
 @use '../global' as g;
 
 .p-sect-body {
-  max-width: 355px;
+  
+  @include g.mq(tab) {
+    max-width: 355px;
+  }
 }
 
 .p-sect-body__text {

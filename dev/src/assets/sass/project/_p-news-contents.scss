@@ -28,8 +28,9 @@
   &:hover {
     color: g.$c-primary;
     transition: .3s all ease;
-
+    
     .p-news-contents__label {
+      color: g.$c-primary;
       border-color: g.$c-primary;
       transition: .3s all ease;
     }
