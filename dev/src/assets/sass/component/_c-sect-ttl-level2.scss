@@ -1,0 +1,22 @@
+@use '../global' as g;
+
+.c-sect-ttl-level2 {
+  @include g.font(28, 31, 700);
+
+  @include g.mq(tab) {
+    @include g.font(36, 41, 700);
+  }
+
+  span {
+    display: block;
+    @include g.font(12, 16, 500);
+    font-family: g.$ff-jp;
+    color: g.$c-primary;
+    margin-top: 5px;
+
+    @include g.mq(tab) {
+      @include g.font(14, 19, 500);
+      margin-top: 7px;
+    }
+  }
+}

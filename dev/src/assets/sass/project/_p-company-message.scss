@@ -1,0 +1,32 @@
+@use '../global' as g;
+
+.p-company-message {}
+
+.p-company-message__ttl {}
+
+.p-company-message__img {
+  margin-top: 57px;
+  position: relative;
+
+  img {
+    aspect-ratio: 350 / 310;
+  }
+
+  &::after {
+    content: 'MESSAGE';
+    @include g.font(48, 53, 700);
+    text-stroke: 1px g.$c-primary;
+    -webkit-text-stroke: 1px g.$c-primary;
+    color: transparent;
+    letter-spacing: .025em;
+    position: absolute;
+    top: -27px;
+    right: 0;
+  }
+}
+
+.p-company-message__contents {}
+
+.p-company-message__lead {}
+
+.p-company-message___text {}

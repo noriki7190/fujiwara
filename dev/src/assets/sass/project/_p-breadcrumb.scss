@@ -1,0 +1,8 @@
+@use '../global' as g;
+
+.p-breadcrumb {
+  @include g.font(14, 19, 400);
+  margin-top: 41px;
+  text-align: right;
+  margin-right: 40px;
+}

@@ -4,12 +4,6 @@
   position: relative;
   padding-top: 270px;
   padding-bottom: 145px;
-  // overflow: hidden;
-
-  
-  // background: #fff;
-  // z-index: 10;
-
 
   @include g.mq(tab) {
     height: 100vh;
