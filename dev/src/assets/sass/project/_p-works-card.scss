@@ -1,0 +1,33 @@
+@use '../global' as g;
+
+.p-works-card {
+  position: relative;
+}
+
+.p-works-card__link {
+
+}
+
+.p-works-card__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.p-works-card__img {
+
+}
+
+.p-works-card__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  @include g.font(15, 20, 400);
+}
+
+.p-works-card__name {
+  font-family: g.$ff-jp;
+}
+
+.p-works-card__date {}

@@ -1,0 +1,30 @@
+@use '../global' as g;
+
+.p-category-tab {
+  display: flex;
+  gap: 27px;
+  
+
+  @include g.mq(tab) {
+    gap: 56px;
+  }
+}
+
+.p-category-tab__item {
+
+}
+
+.p-category-tab__link {
+  @include g.font(13, 17, 700);
+  letter-spacing: .15em;
+  font-family: g.$ff-jp;
+  color: #CBCBCB;
+
+  @include g.mq(tab) {
+    @include g.font(20, 27, 700);
+  }
+
+  &.is-active {
+    color: g.$c-text;
+  }
+}

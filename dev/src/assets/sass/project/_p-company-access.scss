@@ -1,0 +1,67 @@
+@use '../global' as g;
+
+.p-company-access {
+  padding-top: 152px;
+  padding-bottom: 152px;
+
+  @include g.mq(tab) {
+    padding-top: 225px;
+    padding-bottom: 216px;
+  }
+}
+
+.p-company-access__inner {
+  @include g.mq(tab) {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+}
+
+.p-company-access__ttl {
+
+}
+
+.p-company-access__description {
+  @include g.mq(tab) {
+    flex: 0 1 680px;
+  }
+}
+
+.p-company-access__map {
+  margin-bottom: 32px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  
+  @include g.mq(sp) {
+    height: 272px;
+    margin-top: 57px;
+  }
+
+  @include g.mq(tab) {
+    
+  }
+
+  iframe {
+    width: 100%;
+    // height: 100%;
+
+    @include g.mq(sp) {
+      height: 272px;
+    }
+
+  }
+}
+
+.p-company-access__map-logo {
+  position: absolute;
+  top: calc(103 / 272 * 100%);
+  width: 100px;
+
+  @include g.mq(tab) {
+    width: 162px;
+  }
+}

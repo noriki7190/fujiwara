@@ -1,0 +1,31 @@
+@use '../global' as g;
+
+.p-description-list {}
+
+.p-description-list__row {
+  display: flex;
+  @include g.fz(15);
+  line-height: calc(20 / 15);
+  letter-spacing: .15em;
+
+  font-family: g.$ff-jp;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-top: 1px solid #CBCBCB;
+  &:last-child {
+    border-bottom: 1px solid #CBCBCB;
+  }
+
+  @include g.mq(tab) {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+
+.p-description-list__dt {
+  flex: 0 1 160px;
+  font-weight: 700;
+
+}
+
+.p-description-list__dd {}

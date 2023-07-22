@@ -1,0 +1,28 @@
+@use '../global' as g;
+
+.p-company-information {}
+
+.p-company-information__inner {
+  @include g.mq(tab) {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
+.p-company-information__ttl {
+  
+}
+
+.p-company-information__description {
+  // margin-left: 40px;
+  
+  @include g.mq(sp) {
+    margin-top: 57px;
+  }
+  
+  @include g.mq(tab) {
+    flex: 0 1 680px;
+
+  }
+}

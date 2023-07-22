@@ -1,12 +1,28 @@
 @use '../global' as g;
 
-.p-company-message {}
+.p-company-message {
+  padding-top: 124px;
+  padding-bottom: 225px;
+}
 
 .p-company-message__ttl {}
+
+.p-company-message__inner {
+  @include g.mq(tab) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+  }
+}
 
 .p-company-message__img {
   margin-top: 57px;
   position: relative;
+
+  @include g.mq(tab) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 
   img {
     aspect-ratio: 350 / 310;
@@ -20,13 +36,48 @@
     color: transparent;
     letter-spacing: .025em;
     position: absolute;
-    top: -27px;
     right: 0;
+    
+    @include g.mq(sp) {
+      top: -27px;
+    }
+
+    @include g.mq(tab) {
+      @include g.font(200, 223, 700);
+      bottom: -111px;
+      
+    }
   }
 }
 
-.p-company-message__contents {}
+.p-company-message__contents {
+  margin-top: 25px;
 
-.p-company-message__lead {}
+  @include g.mq(tab) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    max-width: 355px;
+    margin-top: 58px;
+  }
+}
 
-.p-company-message___text {}
+.p-company-message__lead {
+  @include g.font(20, 27, 400);
+  letter-spacing: .015em;
+  font-family: g.$ff-jp;
+
+  @include g.mq(tab) {
+    @include g.font(28, 37, 400);
+  }
+}
+
+.p-company-message___text {
+  @include g.font(15, 28, 400);
+  letter-spacing: .015em;
+  font-family: g.$ff-jp;
+  margin-top: 25px;
+
+  @include g.mq(tab) {
+    margin-top: 34px;
+  }
+}

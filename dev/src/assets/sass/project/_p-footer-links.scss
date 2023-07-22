@@ -1,0 +1,61 @@
+@use '../global' as g;
+
+.p-footer-links {
+  @include g.mq(tab) {
+    display: flex;
+  }
+
+}
+
+.p-footer-links__item {
+  text-align: center;
+  position: relative;
+  z-index: -1;
+
+  @include g.mq(tab) {
+    flex: 0 1 50%;
+  }
+
+  &::after {
+    content: '';
+    background: rgba(17, 17, 17, .3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &--contact {
+    background: url(../img/footer/footer_contact_img.jpg) no-repeat center center / cover;
+  }
+
+  &--recruit {
+    background: url(../img/footer/footer_recruit_img.jpg) no-repeat center center / cover;
+
+  }
+}
+
+.p-footer-links__link {
+  display: inline-block;
+  padding-top: 84.5px;
+  padding-bottom: 85.5px;
+  color: #fff;
+  @include g.font(42, 47, 700);
+
+  span {
+    display: block;
+    @include g.font(18, 24, 700);
+  }
+
+  @include g.mq(tab) {
+    @include g.font(64, 72, 700);
+    padding-top: 172px;
+    padding-bottom: 174px;
+
+    span {
+      @include g.font(24, 32, 700);
+    }
+  }
+}

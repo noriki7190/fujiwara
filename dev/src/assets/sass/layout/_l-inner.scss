@@ -2,6 +2,7 @@
 
 .l-inner {
   max-width: g.$inner-width;
+  max-width: calc(g.$inner-width + (g.$inner-padding-pc * 2));
   width: 100%;
   margin: auto;
   padding-left: g.$inner-padding;
