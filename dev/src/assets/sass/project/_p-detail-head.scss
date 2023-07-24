@@ -1,0 +1,47 @@
+@use '../global' as g;
+
+.p-detail-head {
+
+}
+
+.p-detail-head__ttl {
+  @include g.font(20, 27, 400);
+  font-family: g.$ff-jp;
+
+  @include g.mq(tab) {
+    @include g.font(28, 37, 400);
+  }
+}
+
+.p-detail-head__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+
+  @include g.mq(tab) {
+    margin-top: 27px;
+  }
+}
+
+.p-detail-head__date {
+  @include g.font(16, 17, 400);
+  letter-spacing: 0.05;
+}
+
+.p-detail-head__category {
+  @include g.font(14, 19, 400);
+  letter-spacing: 0.15;
+  border: 1px solid g.$c-text;
+  min-width: 80px;
+  padding: 7px 16px 6px;
+  text-align: center;
+}
+
+.p-detail-head__img {
+  margin-top: 32px;
+
+  @include g.mq(tab) {
+    margin-top: 40px;
+  }
+}
