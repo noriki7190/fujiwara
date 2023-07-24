@@ -2,9 +2,11 @@
 
 .p-works-detail {
   margin-top: 206px;
+  padding-bottom: 152px;
 
   @include g.mq(tab) {
-    margin-top: 323px;
+    margin-top: 214px;
+    padding-bottom: 200px;
   }
 }
 
@@ -13,6 +15,7 @@
   @include g.mq(tab) {
     display: flex;
     justify-content: space-between;
+    gap: 40px;
   }
 }
 
@@ -21,5 +24,17 @@
 
   @include g.mq(tab) {
     display: block;
+    flex: 0 0 auto;
   }
+}
+
+.p-works-detail__contents {
+
+  @include g.mq(tab) {
+    flex: 0 1 720px;
+  }
+}
+
+.p-works-detail-contents__blocks {
+  
 }

@@ -1,0 +1,8 @@
+@use '../global' as g;
+
+.c-btn-secondary {
+  @include g.font(20, 22, 400);
+  padding: 20px 35px;
+  border: 1px solid #CBCBCB;
+  display: inline-block;
+}

@@ -1,0 +1,116 @@
+@use '../global' as g;
+
+.p-works-detail-contents-category-link {}
+
+.p-works-detail-contents-category-link__list {}
+
+.p-works-detail-contents-category-link__item {
+  border-top: 1px solid #CBCBCB;
+
+  &:last-child {
+    border-bottom: 1px solid #CBCBCB;
+  }
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 44px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid g.$c-text;
+    border-radius: 50%;
+
+    @include g.mq(tab) {
+      width: 40px;
+      height: 40px;
+      right: 40px;
+    }
+  }
+
+  &::before {
+    content: '';
+    width: 4.5px;
+    height: 4.5px;
+    border-bottom: 1px solid g.$c-text;
+    border-right: 1px solid g.$c-text;
+    position: absolute;
+    right: 55px;
+    transform: rotate(-45deg);
+
+    @include g.mq(tab) {
+      width: 7.6px;
+      height: 7.6px;
+      right: 57px;
+    }
+  }
+}
+
+.p-works-detail-contents-category-link__link {
+  @include g.font(28, 31, 700);
+  padding-top: 40px;
+  padding-bottom: 41px;
+  padding-left: 24px;
+  width: 100%;
+
+  span {
+    @include g.font(12, 16, 500);
+    font-family: g.$ff-jp;
+    display: block;
+    margin-top: 5px;
+  }
+
+  @include g.mq(tab) {
+    @include g.font(36, 41, 700);
+    padding-top: 56px;
+    padding-bottom: 57px;
+
+    span {
+      @include g.font(14, 19, 500);
+      margin-top: 7px;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.p-works-detail-contents-category-link__btn {
+  margin-top: 64px;
+  text-align: center;
+
+  @include g.mq(tab) {
+    margin-top: 80px;
+  }
+}
+
+// 種類別
+.p-works-detail-contents-category-link__item {
+  &--architecture {
+    .p-works-detail-contents-category-link__link {
+      &:hover {
+        background: g.$c-primary;
+      }
+    }
+  }
+
+  &--civil {
+    .p-works-detail-contents-category-link__link {
+      &:hover {
+        background: g.$c-secondary;
+      }
+    }
+  }
+
+  &--housing {
+    .p-works-detail-contents-category-link__link {
+      &:hover {
+        background: g.$c-tertiary;
+      }
+    }
+  }
+}

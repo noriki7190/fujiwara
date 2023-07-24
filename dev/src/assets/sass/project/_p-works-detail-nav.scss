@@ -1,11 +1,14 @@
 @use '../global' as g;
 
 .p-works-detail-nav {
+  // position: sticky;
+  // height: 100%;
 }
 
 .p-works-detail-nav__list {
   display: grid;
   gap: 26px;
+  // position: sticky;
 }
 
 .p-works-detail-nav__item {
