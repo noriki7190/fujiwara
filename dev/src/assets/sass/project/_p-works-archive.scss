@@ -10,25 +10,6 @@
   }
 }
 
-.p-works-archive__head {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #CBCBCB;
-}
-
-.p-works-archive__category {
-  @include g.font(20, 22, 700);
-
-  @include g.mq(tab) {
-    @include g.font(36, 41, 700);
-  }
-}
-
-.p-works-archive__tab {
-
-}
-
 .p-works-archive__contents {
   margin-top: 40px;
   display: grid;

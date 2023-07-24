@@ -11,6 +11,35 @@
     border-bottom: 1px solid #CBCBCB;
   }
 
+
+
+}
+
+.p-works-detail-contents-category-link__link {
+  @include g.font(28, 31, 700);
+  padding-top: 40px;
+  padding-bottom: 41px;
+  padding-left: 24px;
+  width: 100%;
+
+  span {
+    @include g.font(12, 16, 500);
+    font-family: g.$ff-jp;
+    display: block;
+    margin-top: 5px;
+  }
+
+  @include g.mq(tab) {
+    @include g.font(36, 41, 700);
+    padding-top: 56px;
+    padding-bottom: 57px;
+
+    span {
+      @include g.font(14, 19, 500);
+      margin-top: 7px;
+    }
+  }
+
   display: flex;
   align-items: center;
   position: relative;
@@ -47,35 +76,18 @@
       right: 57px;
     }
   }
-}
-
-.p-works-detail-contents-category-link__link {
-  @include g.font(28, 31, 700);
-  padding-top: 40px;
-  padding-bottom: 41px;
-  padding-left: 24px;
-  width: 100%;
-
-  span {
-    @include g.font(12, 16, 500);
-    font-family: g.$ff-jp;
-    display: block;
-    margin-top: 5px;
-  }
-
-  @include g.mq(tab) {
-    @include g.font(36, 41, 700);
-    padding-top: 56px;
-    padding-bottom: 57px;
-
-    span {
-      @include g.font(14, 19, 500);
-      margin-top: 7px;
-    }
-  }
 
   &:hover {
     color: #fff;
+
+    &::before {
+      border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+    }
+
+    &::after {
+      border: 1px solid #fff;
+    }
   }
 }
 
@@ -94,6 +106,7 @@
     .p-works-detail-contents-category-link__link {
       &:hover {
         background: g.$c-primary;
+        cursor: url(../img/service/service_architecture_img.jpg), pointer;
       }
     }
   }
@@ -101,7 +114,7 @@
   &--civil {
     .p-works-detail-contents-category-link__link {
       &:hover {
-        background: g.$c-secondary;
+        background: g.$c-tertiary;
       }
     }
   }
@@ -109,7 +122,7 @@
   &--housing {
     .p-works-detail-contents-category-link__link {
       &:hover {
-        background: g.$c-tertiary;
+        background: g.$c-secondary;
       }
     }
   }

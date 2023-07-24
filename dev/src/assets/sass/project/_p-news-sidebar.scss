@@ -1,0 +1,37 @@
+@use '../global' as g;
+
+.p-news-sidebar {
+  @include g.mq(sp) {
+    padding-left: 20px;
+    margin-top: 112px;
+  }
+  padding-right: 39px;
+}
+
+.p-news-sidebar__head {
+  @include g.font(20, 22, 700);
+
+  @include g.mq(tab) {
+    @include g.font(30, 33, 700);
+  }
+}
+
+.p-news-sidebar__contents {
+  margin-top: 21px;
+
+  @include g.mq(sp) {
+    margin-top: 29px;
+  }
+}
+
+.p-news-sidebar__row {
+
+  &+& {
+    margin-top: 20px;
+  }
+}
+
+.p-news-sidebar__link {
+  @include g.font(16, 21, 400);
+
+}

@@ -1,0 +1,18 @@
+@use '../global' as g;
+
+.p-archive-head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #CBCBCB;
+}
+
+.p-archive-head__category {
+  @include g.font(20, 22, 700);
+
+  @include g.mq(tab) {
+    @include g.font(36, 41, 700);
+  }
+}
+
+.p-archive-head__tab {}
