@@ -1,0 +1,39 @@
+@use '../global' as g;
+
+.p-works-detail-nav {
+}
+
+.p-works-detail-nav__list {
+  display: grid;
+  gap: 26px;
+}
+
+.p-works-detail-nav__item {
+  padding-left: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &.is-current {
+    .p-works-detail-nav__link {
+      color: g.$c-text;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: g.$c-primary;
+      border-radius: 50%;
+      left: 0;
+
+    }
+  }
+}
+
+.p-works-detail-nav__link {
+  @include g.font(20, 27, 700);
+  font-family: g.$ff-jp;
+  color: #CBCBCB;
+}

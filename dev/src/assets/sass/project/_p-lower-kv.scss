@@ -6,7 +6,8 @@
 
 .p-lower-kv__inner {
   position: relative;
-  
+  padding-top: 152px;
+
   @include g.mq(tab) {
     padding-top: 400px;
     padding-bottom: 109px;
@@ -14,20 +15,28 @@
   }
 }
 
-.p-lower-kv__ttl {
-
-}
+.p-lower-kv__ttl {}
 
 .p-lower-kv__hero {
-  position: absolute;
-  top: 0;
-  left: 180px;
-  z-index: -1;
   // margin-right: calc(50% - 50vw);
   height: 100%;
-  width: calc(50vw + (380 / 1040 * 100%));
+  
+
+  @include g.mq(sp) {
+    margin-top: 40px;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
 
   img {
     height: 100%;
+  }
+
+  @include g.mq(tab) {
+    top: 0;
+    left: 180px;
+    z-index: -1;
+    position: absolute;
+    width: calc(50vw + (380 / 1040 * 100%));
   }
 }

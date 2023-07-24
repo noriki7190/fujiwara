@@ -1,0 +1,25 @@
+@use '../global' as g;
+
+.p-works-detail {
+  margin-top: 206px;
+
+  @include g.mq(tab) {
+    margin-top: 323px;
+  }
+}
+
+.p-works-detail__inner {
+  
+  @include g.mq(tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-works-detail__nav {
+  display: none;
+
+  @include g.mq(tab) {
+    display: block;
+  }
+}
