@@ -1,0 +1,18 @@
+@use '../global' as g;
+
+.p-share-btn {
+  height: 60px;
+}
+
+.p-share-btn__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.p-share-btn__item {
+
+}
+
+.p-share-btn__link {
+
+}

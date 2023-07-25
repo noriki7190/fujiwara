@@ -17,10 +17,11 @@
 
 .p-works-detail-contents-category-link__link {
   @include g.font(28, 31, 700);
-  padding-top: 40px;
-  padding-bottom: 41px;
+  // padding-top: 40px;
+  // padding-bottom: 41px;
   padding-left: 24px;
   width: 100%;
+  height: 180px;
 
   span {
     @include g.font(12, 16, 500);
@@ -106,7 +107,7 @@
     .p-works-detail-contents-category-link__link {
       &:hover {
         background: g.$c-primary;
-        cursor: url(../img/service/service_architecture_img.jpg), pointer;
+        cursor: url(../img/works_detail/service_architecture_img.png), auto;
       }
     }
   }

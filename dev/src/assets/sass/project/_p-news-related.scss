@@ -1,0 +1,32 @@
+@use '../global' as g;
+
+.p-news-related {
+  padding-top: 112px;
+
+  @include g.mq(tab) {
+    padding-top: 152px;
+  }
+}
+
+.p-news-related__inner {
+
+}
+
+.p-news-related__ttl {
+  @include g.font(20, 22, 700);
+  padding-bottom: 12px;
+  border-bottom: 1px solid #CBCBCB;
+
+  @include g.mq(tab) {
+    @include g.font(36, 41, 700);
+    padding-bottom: 20px;
+  }
+}
+
+.p-news-related-contents {
+  margin-top: 32px;
+
+  @include g.mq(tab) {
+    margin-top: 40px;
+  }
+}
