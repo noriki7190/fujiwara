@@ -1,0 +1,39 @@
+@use '../global' as g;
+
+.p-privacy-policy {
+  padding-top: 213px;
+  padding-bottom: 152px;
+
+  @include g.mq(tab) {
+    padding-top: 283px;
+    padding-bottom: 192px;
+  }
+}
+
+.p-privacy-policy__contents {
+  letter-spacing: .15em;
+  max-width: 800px;
+
+  h2 {
+    @include g.font(20, 28, 400);
+
+    @include g.mq(tab) {
+      @include g.font(28, 47, 400);
+    }
+  }
+
+  h3 {
+    @include g.font(20, 28, 400);
+    margin-top: 57px;
+
+    @include g.mq(tab) {
+      @include g.font(28, 47, 400);
+      margin-top: 82px;
+    }
+  }
+
+  p {
+    @include g.font(15, 28, 400);
+    margin-top: 25px;
+  }
+}

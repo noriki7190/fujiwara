@@ -2,7 +2,7 @@
 
 .u-loop {
   width: 100vw;
-  animation: loop-text 20s linear  infinite;
+  animation: loop-text 10s linear  infinite;
 }
 
 @keyframes loop-text {
@@ -11,6 +11,6 @@
   }
 
   to {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }

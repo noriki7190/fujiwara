@@ -115,6 +115,7 @@ const watchFiles = () => {
   gulp.watch(srcPath.sass, gulp.series(compileSass, browserSyncReload));
   gulp.watch(srcPath.js, gulp.series(minJS, browserSyncReload));
   gulp.watch(srcPath.html, gulp.series(html, browserSyncReload));
+  gulp.watch(srcPath.img, gulp.series(copyImg, browserSyncReload));
 }
 
 const minJS = () => {

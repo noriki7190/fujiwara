@@ -1,0 +1,35 @@
+@use '../global' as g;
+
+.p-recruit-message {
+  padding-top: 112px;
+
+  @include g.mq(tab) {
+    padding-top: 192px;
+  }
+}
+
+.p-recruit-message__inner {
+
+}
+
+.p-recruit-message__img {
+
+}
+
+.p-recruit-message__contents {
+  @include g.mq(sp) {
+    margin-top: 24px;
+  }
+}
+
+.p-recruit-message__ttl {
+
+}
+
+.p-recruit-message__lead {
+
+}
+
+.p-recruit-message__txt {
+
+}
