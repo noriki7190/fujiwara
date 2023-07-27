@@ -2,14 +2,39 @@
 
 .p-recruit-message {
   padding-top: 112px;
+  padding-bottom: 128px;
 
   @include g.mq(tab) {
     padding-top: 192px;
   }
+
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: 0;
+    height: calc(100% + 100px);
+    width: calc(310 / 390 * 100%);
+    background: #D9E3DD;
+    z-index: -1;
+
+
+    @include g.mq(tab) {
+      // left基準にする？
+      top: 96px;
+      height: calc(100% - 96px);
+      width: calc( (1060 / 1440) * 100%);
+    }
+  }
 }
 
 .p-recruit-message__inner {
-
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  gap: 40px;
 }
 
 .p-recruit-message__img {
@@ -20,6 +45,10 @@
   @include g.mq(sp) {
     margin-top: 24px;
   }
+
+  @include g.mq(tab) {
+    flex: 0 0 355px;
+  }
 }
 
 .p-recruit-message__ttl {
@@ -27,9 +56,20 @@
 }
 
 .p-recruit-message__lead {
-
+  @include g.font(20, 27, 400);
+  font-family: g.$ff-jp;
+  margin-top: 26px;
+  letter-spacing: .15em;
+  
+  @include g.mq(tab) {
+    @include g.font(28, 37, 400);
+    margin-top: 58px;
+  }
 }
 
 .p-recruit-message__txt {
-
+  @include g.font(15, 28, 400);
+  letter-spacing: .15em;
+  margin-top: 24px;
+  font-family: g.$ff-jp;
 }
