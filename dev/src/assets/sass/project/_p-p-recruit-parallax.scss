@@ -1,0 +1,14 @@
+@use '../global' as g;
+
+.p-p-recruit-parallax {
+  height: 245px;
+  width: 100%;
+  background: url(../img/recruit/recruit_parallax_img.jpg) no-repeat center center / cover;
+  margin-top: 112px;
+
+
+  @include g.mq(tab) {
+    height: 432px;
+    margin-top: 96px;
+  }
+}

@@ -1,0 +1,97 @@
+@use '../global' as g;
+
+.p-accordion {}
+
+.p-accordion__list {}
+
+.p-accordion__item {
+  border-top: 1px solid #CBCBCB;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @include g.mq(tab) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #CBCBCB;
+  }
+}
+
+.p-accordion__head {
+  position: relative;
+  @include g.font(14, 32, 500);
+  display: block;
+  width: 100%;
+  text-align-last: left;
+
+  @include g.mq(tab) {
+    @include g.font(16, 28, 500);
+  }
+
+  &::before {
+    content: 'Q.';
+    display: inline-block;
+    color: g.$c-primary;
+    @include g.font(22, 25, 700);
+    font-family: g.$ff-base;
+
+    margin-right: 12px;
+
+    @include g.mq(tab) {
+      @include g.font(28, 32, 700);
+      margin-right: 40px;
+    }
+  }
+
+  // アコーディオン開
+  &.is-open {
+    .p-accordion__icon::after {
+      transform: rotate(90deg);
+      transition: .3s;
+    }
+  }
+}
+
+.p-accordion__icon {
+  &::before,
+  &::after {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: #707070;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+  }
+}
+
+.p-accordion__body {
+  display: none;
+  // display: flex;
+  @include g.font(14, 32, 400);
+  margin-top: 24px;
+
+  @include g.mq(tab) {
+    @include g.font(16, 28, 400);
+    margin-top: 32px;
+  }
+
+  &::before {
+    content: 'A.';
+    display: inline-block;
+    color: g.$c-text;
+    @include g.font(22, 25, 700);
+    font-family: g.$ff-base;
+    margin-right: 12px;
+
+    @include g.mq(tab) {
+      @include g.font(28, 32, 700);
+      margin-right: 40px;
+    }
+  }
+}

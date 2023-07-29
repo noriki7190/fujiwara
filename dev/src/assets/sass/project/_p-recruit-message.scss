@@ -6,6 +6,7 @@
 
   @include g.mq(tab) {
     padding-top: 192px;
+    padding-bottom: 96px;
   }
 
   position: relative;
@@ -25,21 +26,21 @@
       // left基準にする？
       top: 96px;
       height: calc(100% - 96px);
-      width: calc( (1060 / 1440) * 100%);
+      width: calc((1060 / 1440) * 100%);
     }
   }
 }
 
 .p-recruit-message__inner {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-  gap: 40px;
+  @include g.mq(tab) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
 }
 
-.p-recruit-message__img {
-
-}
+.p-recruit-message__img {}
 
 .p-recruit-message__contents {
   @include g.mq(sp) {
@@ -51,16 +52,14 @@
   }
 }
 
-.p-recruit-message__ttl {
-
-}
+.p-recruit-message__ttl {}
 
 .p-recruit-message__lead {
   @include g.font(20, 27, 400);
   font-family: g.$ff-jp;
   margin-top: 26px;
   letter-spacing: .15em;
-  
+
   @include g.mq(tab) {
     @include g.font(28, 37, 400);
     margin-top: 58px;
