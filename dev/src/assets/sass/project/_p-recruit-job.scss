@@ -1,0 +1,29 @@
+@use '../global' as g;
+
+.p-recruit-job {
+  padding-bottom: 112px;
+  padding-top: 112px;
+
+  @include g.mq(tab) {
+    padding-bottom: 192px;
+    padding-top: 192px;
+  }
+}
+
+.p-recruit-job__inner {}
+
+.p-recruit-job__ttl {}
+
+.p-recruit-job__tab {
+  max-width: 780px;
+  margin-left: auto;
+  margin-top: 57px;
+
+  @include g.mq(tab) {
+    margin-top: 80px;
+  }
+}
+
+.p-recruit-job__description {
+  
+}

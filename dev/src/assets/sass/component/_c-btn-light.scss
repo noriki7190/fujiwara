@@ -1,0 +1,9 @@
+@use '../global' as g;
+
+.c-btn-light {
+  @include g.font(20, 29, 400);
+  letter-spacing: .15em;
+  padding: 20px 35px 19px;
+  border: 1px solid #CBCBCB;
+  display: inline-block;
+}

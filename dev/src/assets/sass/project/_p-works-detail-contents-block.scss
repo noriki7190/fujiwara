@@ -22,6 +22,7 @@
 
 .p-works-detail-contents-block__txt {
   margin-top: 32px;
+  @include g.font(15, 28, 400);
 
   @include g.mq(tab) {
     margin-top: 40px;

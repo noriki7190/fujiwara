@@ -13,11 +13,38 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
   }
+
+  position: relative;
+
+  &::after {
+    content: 'MESSAGE';
+    @include g.font(48, 53, 700);
+    font-family: g.$ff-base;
+    text-stroke: 1px g.$c-primary;
+    -webkit-text-stroke: 1px g.$c-primary;
+    color: transparent;
+    letter-spacing: .025em;
+    position: absolute;
+    
+    @include g.mq(sp) {
+      top: 75px;
+      right: 20px;
+    }
+  
+    @include g.mq(tab) {
+      @include g.font(200, 223, 700);
+      bottom: -111px;
+      font-size: clamp(3rem, -0.851rem + 20.54vw, 12.5rem);
+      left: 0;
+    }
+  }
+
 }
+
 
 .p-company-message__img {
   margin-top: 57px;
-  position: relative;
+
 
   @include g.mq(tab) {
     grid-column: 2 / 3;
@@ -26,27 +53,6 @@
 
   img {
     aspect-ratio: 350 / 310;
-  }
-
-  &::after {
-    content: 'MESSAGE';
-    @include g.font(48, 53, 700);
-    text-stroke: 1px g.$c-primary;
-    -webkit-text-stroke: 1px g.$c-primary;
-    color: transparent;
-    letter-spacing: .025em;
-    position: absolute;
-    right: 0;
-    
-    @include g.mq(sp) {
-      top: -27px;
-    }
-
-    @include g.mq(tab) {
-      @include g.font(200, 223, 700);
-      bottom: -111px;
-      
-    }
   }
 }
 

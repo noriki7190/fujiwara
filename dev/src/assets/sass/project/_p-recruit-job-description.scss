@@ -1,0 +1,60 @@
+@use '../global' as g;
+
+.p-recruit-job-description {
+  padding-top: 72px;
+
+  @include g.mq(tab) {
+    padding-top: 112px;
+
+  }
+}
+
+.p-recruit-job-description__ttl {
+  @include g.font(20, 29, 400);
+  letter-spacing: .15em;
+
+  @include g.mq(tab) {
+    @include g.font(24, 35, 400);
+  }
+
+  // position: relative;
+  display: flex;
+  // align-items: start;
+
+  &::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: 6px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: g.$c-primary;
+    margin-right: 12px;
+
+    @include g.mq(tab) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.p-recruit-job-description__dl {
+  margin-top: 40px;
+  max-width: 780px;
+  margin-left: auto;
+
+  @include g.mq(tab) {
+    margin-top: 81px;
+  }
+}
+
+.p-recruit-job-description__btn {
+  text-align: center;
+  margin-top: 64px;
+
+  @include g.mq(tab) {
+    margin-top: 60px;
+  }
+}

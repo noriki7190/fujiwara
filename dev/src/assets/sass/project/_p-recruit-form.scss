@@ -1,0 +1,86 @@
+@use '../global' as g;
+
+.p-recruit-form {
+  // text-align: center;
+  padding-bottom: 112px;
+
+  @include g.mq(tab) {
+    padding-bottom: 192px;
+  }
+}
+
+.p-recruit-form__inner {
+  max-width: 760px;
+  margin: auto;
+  width: 100%;
+}
+
+.p-recruit-form__link {
+  display: inline-block;
+  padding: 21px;
+  // outline: auto;
+  // margin: auto;
+  width: 100%;
+  // max-width: 760px;
+}
+
+.p-recruit-from__body {
+  background: g.$c-primary;
+
+
+  align-items: center;
+  padding: 32px;
+
+  @include g.mq(tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include g.mq(tab) {
+    padding: 90px 80px;
+  }
+}
+
+
+
+.p-recruit-form__ttl {}
+
+.p-recruit-form__btn {
+  margin-left: auto;
+
+  @include g.mq(sp) {
+    margin-top: 26px;
+  }
+}
+
+.p-recruit-form__bg {
+  // background: rgba(24, 47, 32, .7);
+  height: 182px;
+  margin-top: -91px;
+  position: relative;
+  z-index: -1;
+
+  @include g.mq(tab) {
+    height: 246px;
+    margin-top: -123px;
+  }
+
+  // img {
+  //   position: relative;
+  //   z-index: -1;
+  // }
+
+  background: url(../img/home/home_parallax_img02.jpg);
+  background-position: center;
+
+  &::after {
+    content: '';
+    background: rgba(24, 47, 32, .7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+}

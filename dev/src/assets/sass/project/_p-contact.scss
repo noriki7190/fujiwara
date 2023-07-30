@@ -1,0 +1,13 @@
+@use '../global' as g;
+
+.p-contact {
+  padding-top: 212px;
+
+  @include g.mq(tab) {
+    padding-top: 171px;
+  }
+}
+
+.p-contact__inner {
+  max-width: 800px;
+}

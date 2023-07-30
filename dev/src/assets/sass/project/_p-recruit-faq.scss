@@ -1,6 +1,6 @@
 @use '../global' as g;
 
-.p-p-recruit-faq {
+.p-recruit-faq {
   padding-top: 112px;
 
   @include g.mq(tab) {
@@ -8,7 +8,7 @@
   }
 }
 
-.p-p-recruit-faq__inner {
+.p-recruit-faq__inner {
   display: grid;
 
   @include g.mq(tab) {
@@ -18,9 +18,9 @@
   }
 }
 
-.p-p-recruit-faq__ttl {}
+.p-recruit-faq__ttl {}
 
-.p-p-recruit-faq__body {
+.p-recruit-faq__body {
   @include g.mq(sp) {
     margin-top: 57px;
   }

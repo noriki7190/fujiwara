@@ -1,0 +1,48 @@
+@use '../global' as g;
+
+.p-tel-block {
+  background: #F0F0F0;
+  padding: 32px;
+
+
+  @include g.mq(tab) {
+    // padding-top: 67px;
+    // padding-bottom: 68px;
+    padding: 67px 124px 68px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-tel-block__top {
+  display: grid;
+  gap: 4px;
+
+  @include g.mq(tab) {
+    margin-top: 6px;
+  }
+}
+
+
+.p-tel-block__bottom {
+  display: grid;
+  gap: 4px;
+
+  @include g.mq(sp) {
+    text-align: right;
+    margin-top: 42px;
+  }
+
+  @include g.mq(tab) {
+    margin-top: 6px;
+  }
+}
+
+.p-tel-block__tel {
+  @include g.font(28, 31, 700);
+  text-transform: uppercase;
+}
+
+.p-tel-block__txt {
+  @include g.font(13, 19, 700);
+}

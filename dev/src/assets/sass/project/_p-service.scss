@@ -1,0 +1,26 @@
+@use '../global' as g;
+
+.p-service-parallax {}
+
+.p-service-parallax__item {
+  width: 100%; //背景画像の横幅
+  height: 400px; //背景画像の高さ
+  position: sticky; //背景画像を固定
+  top: 0;
+  left: 0;
+  z-index: -1; //z軸位置指定
+  // background-image: url(https://kasumiblog.xsrv.jp/codepen/images/clouds.jpg); //背景画像を指定
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--parallax1 {
+    background-image: url(../img/service/service_architecture_img.jpg);
+  }
+  &--parallax2 {
+    background: url(../img/service_civil_img.jpg);
+  }
+  &--parallax3 {
+    background: url(../img/service/service_housing_img.jpg);
+  }
+}

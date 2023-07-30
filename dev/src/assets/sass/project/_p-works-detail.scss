@@ -13,8 +13,10 @@
 .p-works-detail__inner {
   
   @include g.mq(tab) {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr calc(720 / 1040 * 100%);
     gap: 40px;
   }
 }
@@ -25,6 +27,9 @@
   @include g.mq(tab) {
     display: block;
     flex: 0 0 auto;
+    height: 100%;
+    // position: sticky;
+    // top: 0;
   }
 }
 
