@@ -2,12 +2,19 @@
 
 .p-contact {
   padding-top: 212px;
+  padding-bottom: 152px;
 
   @include g.mq(tab) {
     padding-top: 171px;
+    padding-bottom: 192px;
   }
 }
 
 .p-contact__inner {
   max-width: 800px;
+}
+
+.p-contact__txt {
+  @include g.font(15, 28, 400);
+  letter-spacing: .15em;
 }

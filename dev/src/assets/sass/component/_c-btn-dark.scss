@@ -1,0 +1,20 @@
+@use '../global' as g;
+
+.c-btn-dark {
+  background: g.$c-text;
+  color: #fff;
+  border: 1px solid g.$c-text;
+  display: block;
+  text-align: center;
+  padding: 21px;
+  @include g.font(16, 24, 700);
+  letter-spacing: .15em;
+  font-family: g.$ff-jp;
+  transition: .3s;
+
+  &:hover {
+    background: #fff;
+    color: g.$c-text;
+    transition: .3s;
+  }
+}
