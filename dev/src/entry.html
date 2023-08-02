@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- googl fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>藤原建設工業 | 架空の建設会社</title>
+
+  <meta name="description" content="架空の建設会社 デザインカンプからのコーディング">
+</head>
+
+<body>
+  <header class="l-header">
+    <div class="p-header">
+      <div class="p-header__inner">
+        <h1 class="p-header__logo"><a href="/"><img src="./assets/img/logo.png" alt="fuji construction industry"></a>
+        </h1>
+        <!-- /.p-header__logo -->
+
+        <div class="p-header__right">
+          <nav class="p-header__nav p-global-nav">
+            <ul class="p-global-nav__list">
+              <li class="p-global-nav__item">
+                <a href="/" class="p-global-nav__link">home</a><!-- /.p-global-nav__link -->
+              </li><!-- /.p-global-nav__item -->
+              <li class="p-global-nav__item">
+                <a href="company.html" class="p-global-nav__link">company</a><!-- /.p-global-nav__link -->
+              </li><!-- /.p-global-nav__item -->
+              <li class="p-global-nav__item">
+                <a href="service.html" class="p-global-nav__link">service</a><!-- /.p-global-nav__link -->
+              </li><!-- /.p-global-nav__item -->
+              <li class="p-global-nav__item">
+                <a href="works.html" class="p-global-nav__link">works</a><!-- /.p-global-nav__link -->
+              </li><!-- /.p-global-nav__item -->
+              <li class="p-global-nav__item">
+                <a href="news.html" class="p-global-nav__link">news</a><!-- /.p-global-nav__link -->
+              </li><!-- /.p-global-nav__item -->
+            </ul><!-- /.p-global-nav__list -->
+          </nav><!-- /.p-header__nav -->
+
+          <div class="p-header__btn">
+            <div class="c-nav-btn">
+              <a href="recruit.html" class="c-nav-btn__link">recruit</a><!-- /.p-nav__btn -->
+            </div><!-- /.c-nav-btn -->
+            <div class="c-nav-btn c-nav-btn--secondary">
+              <a href="contact.html" class="c-nav-btn__link">contact</a><!-- /.p-nav__btn -->
+            </div><!-- /.p-header-btn -->
+          </div><!-- /.p-header__btn -->
+        </div><!-- /.p-header__right -->
+
+        <div class="p-drawer-icon">
+          <button class="p-drawer-btn" id="js-drawer-icon">
+            <span class="p-drawer-btn__inline"></span>
+          </button><!-- /.p-burger-icon -->
+        </div><!-- /.p-drawer-icon -->
+        <div class="p-drawer" id="js-drawer">
+          <div class="p-drawer__bg"></div><!-- /.p-drawer__bg -->
+          <div class="p-drawer__body">
+            <nav class="p-drawer__nav">
+              <ul class="p-drawer-nav__list">
+                <li class="p-drawer-nav__item">
+                  <a href="/home" class="p-drawer-nav__link">home</a><!-- /.p-drawer-nav__link -->
+                </li><!-- /.p-drawer-nav__item -->
+                <li class="p-drawer-nav__item">
+                  <a href="" class="p-drawer-nav__link">company</a><!-- /.p-drawer-nav__link -->
+                </li><!-- /.p-drawer-nav__item -->
+                <li class="p-drawer-nav__item">
+                  <a href="" class="p-drawer-nav__link">service</a><!-- /.p-drawer-nav__link -->
+                </li><!-- /.p-drawer-nav__item -->
+                <li class="p-drawer-nav__item p-drawer-nav__item--work">
+                  <a href="" class="p-drawer-nav__link">works</a><!-- /.p-drawer-nav__link -->
+                  <a href="" class="p-drawer-nav__child">建築事業</a><!-- /.p-drawer-nav__child -->
+                  <a href="" class="p-drawer-nav__child">土木事業</a><!-- /.p-drawer-nav__child -->
+                  <a href="" class="p-drawer-nav__child">住宅事業</a><!-- /.p-drawer-nav__child -->
+                </li><!-- /.p-drawer-nav__item -->
+                <li class="p-drawer-nav__item">
+                  <a href="" class="p-drawer-nav__link">news</a><!-- /.p-drawer-nav__link -->
+                </li><!-- /.p-drawer-nav__item -->
+              </ul><!-- /.p-drawer-nav__list -->
+
+              <div class="p-drawer__btns">
+                <div class="c-nav-btn">
+                  <a href="" class="c-nav-btn__link">recruit</a><!-- /.p-nav__btn -->
+                </div><!-- /.c-nav-btn -->
+                <div class="c-nav-btn c-nav-btn--secondary">
+                  <a href="" class="c-nav-btn__link">contact</a><!-- /.p-nav__btn -->
+                </div><!-- /.p-header-btn -->
+              </div><!-- /.p-drawer__btns -->
+            </nav><!-- /.p-drawer__nav -->
+
+            <address class="p-drawer__access p-access">
+              <p class="p-access__head">Access</p><!-- /.p-drawer__access -->
+              <p class="p-access__info">
+                藤原建設工業株式会社 本社<br>〒000-0000 千葉県◯◯市◯◯丁目◯◯番<br>TEL 00-0000-0000
+              </p><!-- /.p-drawer__info -->
+            </address><!-- /.p-access -->
+
+            <!-- TODO: リンクにする？ -->
+            <div class="p-drawer__privacy">Privacy Policy</div><!-- /.p-drawer__privacy -->
+            <small class="p-drawer__copyright">© 1995 Fujiwara Construction Industry. Co., Ltd.</small>
+          </div><!-- /.p-drawer__body -->
+        </div><!-- /.p-drawer -->
+      </div><!-- /.p-header__inner -->
+    </div><!-- /.p-header -->
+
+
+    <div class="p-header__kv">
+      <div class="p-lower-kv">
+        <div class="p-lower-kv__inner l-inner">
+          <h1 class="p-lower-kv__ttl c-sect-ttl">Entry Form<span>エントリーフォーム</span></h1><!-- /.p-lower-kv__ttl -->
+          <!-- <div class="p-lower-kv__hero"><img src="./assets/img/work/hero_works_img.jpg" alt=""></div> -->
+          <!-- /.p-lower-kv__hero -->
+        </div><!-- /.l-inner -->
+      </div><!-- /.p-kv -->
+    </div><!-- /.p-header__kv -->
+  </header><!-- /.l-header -->
+
+  <div class="p-breadcrumb">
+    <!-- パンくず -->
+    TOP -- 事業内容
+  </div><!-- /.p-breadcrumb -->
+
+  <main class="l-main">
+    <div class="p-contact">
+      <div class="p-contact__inner l-inner">
+
+        <p class="p-contact__txt">弊社に興味を持って下さりありがとうございます。<br>こちらは採用エントリーフォームのページになります。<br>藤原建設工業へのお問い合わせは、<a class="c-link" href="contact.html">こちらのフォーム</a>からお願い致します。</p>
+        <!-- /.p-contact__txt -->
+
+        <div class="p-contact__form p-contact-form">
+          <h2 class="p-contact-form__ttl c-sect-ttl-level2">Form<span>エントリーフォーム</span></h2>
+          <!-- /.p-contact-form__ttl c-sect-ttl-level2 -->
+
+          <p class="p-contact-form__note p-contact__txt">※全て必須項目となっております。<br>※最後まで入力した後、送信ボタンを押してください。</p>
+
+          <div class="p-contact-form__situation p-contact-situation">
+            <ul class="p-contact-situation__list">
+              <li class="p-contact-situation__item p-contact-situation__item--current">入力</li>
+              <!-- /.p-contact-situation__item -->
+              <li class="p-contact-situation__item">確認</li><!-- /.p-contact-situation__item -->
+              <li class="p-contact-situation__item">完了</li><!-- /.p-contact-situation__item -->
+            </ul><!-- /.p-contact-situation_list -->
+          </div><!-- /.p-contact-situation -->
+          <div class="p-contact-form__body">
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">お問い合わせの種別</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd p-contact-form__dd--select">
+                <select name="" id="">
+                  <option value="選択してください">選択してください</option>
+                </select><!-- /# -->
+              </dd><!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">会社名</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><input class="p-contact-form__input" type="text"></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">お名前</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><input class="p-contact-form__input" type="text"></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">フリガナ</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><input class="p-contact-form__input" type="text"></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">メールアドレス</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><input class="p-contact-form__input" type="email"></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">電話番号</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><input class="p-contact-form__input" type="tel"></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">郵便番号</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class=" p-contact-form__dd p-contact-form__dd--half"><input class="p-contact-form__input" type="text">
+              </dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">都道府県</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd p-contact-form__dd--half"><input class="p-contact-form__input" type="text">
+              </dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">市区町村</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><input class="p-contact-form__input" type="text"></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">番地・建物名</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><input class="p-contact-form__input" type="text"></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+
+            <!-- radio -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                希望職種
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd p-contact-form__dd--radio">
+                <label><input class="p-contact-form__radio"
+                    type="radio"><span>建設</span></label><!-- /.p-contact-form__radio -->
+                <label><input class="p-contact-form__radio"
+                    type="radio"><span>事務</span></label><!-- /.p-contact-form__radio -->
+                <label><input class="p-contact-form__radio"
+                    type="radio"><span>営業</span></label><!-- /.p-contact-form__radio -->
+              </dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">職務履歴書</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><input class="p-contact-form__input" type="file"></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+
+            <!-- textarea -->
+            <dl class="p-contact-form__row">
+              <dt class="p-contact-form__dt">
+                <label for="" class="p-contact-form__label">その他ご質問</label><!-- /.p-contact-form__label -->
+              </dt>
+              <!-- /.p-contact-form__dt -->
+              <dd class="p-contact-form__dd"><textarea name="" id="" cols="30" rows="10"></textarea><!-- /# --></dd>
+              <!-- /.p-contact-form__dd -->
+            </dl><!-- /.p-contact-form__row -->
+
+            <!-- checkbox -->
+            <div class="p-contact-form__check">
+              <input type="checkbox">
+              <span><a href="privacy-policy.html" class="c-link">プライバシーポリシー</a>に同意する</span>
+            </div><!-- /.p-contact-form__check -->
+
+            <div class="p-contact-form__button">
+              <a href="" class="c-btn-dark">内容の確認</a><!-- /.c-btn-dark -->
+              <!-- <input type="submit"> -->
+            </div><!-- /.p-contact-form__button -->
+          </div><!-- /.p-contact-form__body -->
+
+        </div><!-- /.p-contact-form -->
+
+
+      </div><!-- /.p-contact__inner l-inner -->
+
+    </div><!-- /.p-contact -->
+
+  </main><!-- /.l-main -->
+
+  <footer class="l-footer">
+    <!-- 下層ページのみ -->
+    <div class="p-footer-links">
+      <div class="p-footer-links__item p-footer-links__item--contact">
+        <a href="contact.html" class="p-footer-links__link">
+          Contact<span>お問い合わせ</span>
+        </a><!-- /.p-footer-links__link -->
+      </div><!-- /.p-footer-links__item -->
+      <div class="p-footer-links__item p-footer-links__item--recruit">
+        <a href="recruit.html" class="p-footer-links__link">
+          Recruit<span>採用情報</span>
+        </a><!-- /.p-footer-links__link -->
+      </div><!-- /.p-footer-links__item -->
+    </div><!-- /.p-footer-links -->
+    <div class="p-footer">
+      <div class="l-inner">
+        <div class="p-footer__contents">
+          <nav class="p-footer__nav p-footer-nav">
+            <ul class="p-footer-nav__list">
+              <li class="p-footer-nav__item"><a href=""
+                  class="p-footer-nav__link">company</a><!-- /.p-footer-nav__link --></li>
+              <!-- /.p-footer-nav__item -->
+              <li class="p-footer-nav__item"><a href=""
+                  class="p-footer-nav__link">service</a><!-- /.p-footer-nav__link --></li>
+              <!-- /.p-footer-nav__item -->
+              <li class="p-footer-nav__item"><a href=""
+                  class="p-footer-nav__link">works</a><!-- /.p-footer-nav__link --></li><!-- /.p-footer-nav__item -->
+              <li class="p-footer-nav__item"><a href="" class="p-footer-nav__link">news</a><!-- /.p-footer-nav__link -->
+              </li><!-- /.p-footer-nav__item -->
+              <li class="p-footer-nav__item"><a href=""
+                  class="p-footer-nav__link">contact</a><!-- /.p-footer-nav__link --></li>
+              <!-- /.p-footer-nav__item -->
+              <li class="p-footer-nav__item"><a href=""
+                  class="p-footer-nav__link">recruit</a><!-- /.p-footer-nav__link --></li>
+              <!-- /.p-footer-nav__item -->
+            </ul><!-- /.p-footer-nav__list -->
+          </nav><!-- /.p-footer__nav p-footer-nav -->
+          <div class="p-footer__logo"><img src="./assets/img/logo_light.png" alt="藤原建設工業"></div>
+          <!-- /.p-footer__logo -->
+          <address class="p-footer__access p-access">
+            <p class="p-access__head">Access</p><!-- /.p-drawer__access -->
+            <p class="p-access__info">
+              藤原建設工業株式会社 本社<br>〒000-0000 千葉県◯◯市◯◯丁目◯◯番<br>TEL 00-0000-0000
+            </p><!-- /.p-drawer__info -->
+          </address><!-- /.p-access -->
+          <div class="p-footer__bottom">
+            <p class="p-footer__privacy"><a href="">Privacy Policy</a></p><!-- /.p-footer-privacy -->
+            <small class="p-footer__copyright">© 1995 Fujiwara Construction Industry. Co.,
+              Ltd.</small><!-- /.p-footer__copyright -->
+          </div><!-- /.p-footer__bottom -->
+        </div><!-- /.p-footer__contents -->
+      </div><!-- /.l-inner -->
+    </div><!-- /.p-footer -->
+  </footer><!-- /.l-footer -->
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./assets/js/swiper.js"></script>
+</body>
+
+</html>

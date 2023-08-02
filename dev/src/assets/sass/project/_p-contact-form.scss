@@ -6,21 +6,18 @@
   input[type="text"],
   input[type="email"],
   input[type="tel"],
+  input[type="file"],
   textarea,
   select {
     background: #F0F0F0;
     @include g.font(15, 21, 400);
     letter-spacing: .15em;
     padding: 21px 24px 22px;
-
-    &::placeholder {
-      @include g.font(15, 21, 400);
-      letter-spacing: .15em;
-    }
   }
 
   select {
     cursor: pointer;
+    // margin-right: auto;
   }
 }
 
@@ -37,11 +34,12 @@
   @include g.mq(tab) {
     display: flex;
     // align-items: center;
+    justify-content: space-between;
   }
 }
 
 .p-contact-form__dt {
-  flex: 0 0 225px;
+  flex: 0 0 245px;
 }
 
 .p-contact-form__label {
@@ -59,6 +57,7 @@
 
   &--half {
     max-width: 220px;
+    margin-right: auto;
 
     @include g.mq(tab) {
       max-width: 230px;
@@ -66,6 +65,20 @@
   }
 
   &--select {
+    position: relative;
+    margin-right: auto;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      background: url(../img/arrow-bottom.png) no-repeat center center / cover;
+      width: 9px;
+      height: 6px;
+      position: absolute;
+      right: 30px;
+      top: 28px;
+    }
+
     @include g.mq(tab) {
       max-width: 230px;
     }
@@ -76,6 +89,10 @@
 .p-contact-form__dd--radio {
   display: flex;
   gap: 32px;
+
+  @include g.mq(sp) {
+    margin-top: 25px;
+  }
 
 
   @include g.mq(tab) {
@@ -160,17 +177,27 @@
 .p-contact-form__check {
   text-align: center;
   margin-top: 33px;
-  
+
   @include g.mq(tab) {
     margin-top: 48px;
+    max-width: 555px;
+    // margin-left: auto;
+    margin-left: 245px;
   }
 }
 
 // button
 .p-contact-form__button {
   margin-top: 34px;
+  // max-width: calc(555 / 1040 * 100%);
+  // max-width: 555px;
+  // margin-left: auto;
+  // margin-left: 245px;
 
   @include g.mq(tab) {
     margin-top: 50px;
+    max-width: 555px;
+    // margin-left: auto;
+    margin-left: 245px;
   }
 }

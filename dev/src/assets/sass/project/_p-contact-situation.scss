@@ -7,8 +7,11 @@
 .p-contact-situation__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 16px;
 
+  @include g.mq(tab) {
+    gap: 32px;
+  }
 }
 
 .p-contact-situation__item {

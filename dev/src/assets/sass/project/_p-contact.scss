@@ -11,10 +11,62 @@
 }
 
 .p-contact__inner {
-  max-width: 800px;
+  &.l-inner {
+    max-width: 880px;
+  }
 }
 
 .p-contact__txt {
   @include g.font(15, 28, 400);
   letter-spacing: .15em;
+  word-break: keep-all;
 }
+
+.p-contact__tel {
+  margin-top: 40px;
+
+  @include g.mq(tab) {
+    margin-top: 54px;
+  }
+}
+
+.p-contact__form {
+  margin-top: 80px;
+
+  @include g.mq(tab) {
+    margin-top: 115px;
+  }
+}
+
+.p-contact-form__note {
+  margin-top: 27px;
+
+  @include g.mq(tab) {
+    margin-top: 32px;
+  }
+}
+
+.p-contact-form__situation {
+  margin-top: 70px;
+
+  @include g.mq(tab) {
+    margin-top: 85px;
+  }
+}
+
+.p-contact__thanks {
+  @include g.font(18, 26, 400);
+
+  @include g.mq(tab) {
+    @include g.font(20, 29, 400);
+  }
+
+  &+.p-contact__txt {
+    margin-top: 21px;
+
+    @include g.mq(tab) {
+      margin-top: 24px;
+    }
+  }
+}
+
