@@ -1,9 +1,9 @@
 @use '../global' as g;
 
 .p-from {
-  max-width: 800px;
-  margin-top: 50px;
-  margin: 50px auto;
+  // max-width: 800px;
+  // margin-top: 50px;
+  // margin: 50px auto;
 }
 
 .p-form__item {
@@ -57,6 +57,10 @@
     border: 1px solid #B4B4B4;
   }
 
+  select {
+    cursor: pointer;
+  }
+
   &--select {
 
     @include g.mq(tab) {
@@ -78,8 +82,38 @@
   }
 }
 
+.p-form__select {
+  position: relative;
+  display: block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 24px;
+    top: -4px;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid g.$c-text;
+    border-bottom: 1px solid g.$c-text;
+    transform: rotate(45deg);
+
+  }
+}
+
 .p-form__radio-list {
   display: flex;
+  gap: 32px;
+
+  @include g.mq(sp) {
+    margin-top: 25px;
+  }
+
+  @include g.mq(tab) {
+    gap: 40px;
+  }
 }
 
 .p-form__radio-item {
@@ -143,7 +177,7 @@
       @include g.mq(tab) {
         width: 20px;
         height: 20px;
-        left: 5;
+        left: 5px;
       }
     }
   }
