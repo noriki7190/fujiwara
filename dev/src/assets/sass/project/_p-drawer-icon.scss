@@ -27,6 +27,7 @@
     background: #000;
     display: block;
     position: absolute;
+    transition: .3s;
   }
 
   &::before {
@@ -43,12 +44,13 @@
 }
 
 // is-open
-.p-drawer-icon {
+.p-drawer-btn {
   &.is-open {
     .p-drawer-btn__inline {
       // transform: rotate(-45deg);
       // background: transparent;
       background: 0;
+
       &::before {
         transform-origin: left;
         transform: rotate(45deg);

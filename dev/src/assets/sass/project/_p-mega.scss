@@ -1,0 +1,125 @@
+@use '../global' as g;
+
+.p-mega {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+
+  &.is-show {
+    // padding-bottom: 100px;
+    &+.p-mega__body {
+      display: flex;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid g.$c-text;
+    border-right: 1px solid g.$c-text;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    top: 4px;
+  }
+}
+
+.p-mega__body {
+  background: #fff;
+  display: flex;
+  position: fixed;
+  top: 120px;
+  right: 120px;
+  // height: 289px;
+  display: none;
+}
+
+.p-mega__img {
+  background: url(../img/work/works_img06.jpg) no-repeat center center / cover;
+  width: 289px;
+  height: 289px;
+}
+
+.p-mega__contents {
+  width: 350px;
+  // height: 100%;
+}
+
+.p-mega__list {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.p-mega__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-mega__ttl {
+  @include g.font(22, 22, 700);
+
+  span {
+    display: block;
+    @include g.font(12, 17, 400);
+  }
+}
+
+.p-mega__arrow {
+  width: 24px;
+  height: 24px;
+  border: 1px solid g.$c-text;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: .3s;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 4.5px;
+    height: 4.5px;
+    transform: rotate(-45deg);
+    position: absolute;
+  }
+
+  &::before {
+    right: 10px;
+    border-bottom: 1px solid g.$c-text;
+    border-right: 1px solid g.$c-text;
+  }
+
+  &::after {
+    right: 26px;
+    border-bottom: 1px solid g.$c-primary;
+    border-right: 1px solid g.$c-primary;
+  }
+}
+
+// ホバーアニメーション
+.p-mega__link:hover {
+  color: g.$c-primary;
+
+  .p-mega__arrow {
+    border: 1px solid g.$c-primary;
+    // transform: scale(1.2);
+
+    &::before {
+      // right: -6px;
+      border-bottom: 1px solid g.$c-primary;
+      border-right: 1px solid g.$c-primary;
+    }
+
+    // &::after {
+    //   right: 9px;
+    // }
+  }
+}

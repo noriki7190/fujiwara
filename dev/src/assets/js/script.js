@@ -6,16 +6,30 @@ jQuery(function ($) {
     $(this).next().slideToggle();
   });
 
+  // メガメニュー
+  // const $megaMenu = $("#js-mega");
+  $('#js-mega').hover(function () {
+    console.log('hover');
+    // $(this).find('.p-mega__body').stop().slideDown();
+    // alert('hover');
+    $(this).addClass('is-show');
+  }, function () {
+    $(this).removeClass('is-show');
+  });
+
+
+
   // ドロワー
-  var drawer = $("#js-drawer-icon");
+  var drawer = $("#js-drawer-btn");
   drawer.on("click", function () {
     drawer.toggleClass("is-open");
     $("#js-drawer").toggleClass("is-open");
+    $("header").toggleClass("is-open");
     // $("#js-drawer").show();
   });
-  
+
   // scroll
-  $(window).on('load scroll resize', function() {
+  $(window).on('load scroll resize', function () {
     const scrollTop = $(window).scrollTop();
     // console.log(scrollTop);
     const showImgPosition = $('#js-parallax').offset().top - 1000;

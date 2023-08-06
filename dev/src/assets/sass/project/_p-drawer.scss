@@ -8,10 +8,12 @@
   z-index: #{map-get(g.$layer, drawer)};
   top: 0;
   left: 0;
-  display: none;
+  // display: none;
+  transform: translateX(100%);
+  transition: .5s ease;
 
   &.is-open {
-    display: block;
+    transform: translateX(0);
   }
 }
 
