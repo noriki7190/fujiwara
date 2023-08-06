@@ -34,7 +34,7 @@
           <nav class="p-header__nav p-global-nav">
             <ul class="p-global-nav__list">
               <li class="p-global-nav__item">
-                <a href="/" class="p-global-nav__link">home</a><!-- /.p-global-nav__link -->
+                <a href="/" class="p-global-nav__link">top</a><!-- /.p-global-nav__link -->
               </li><!-- /.p-global-nav__item -->
               <li class="p-global-nav__item">
                 <a href="company.html" class="p-global-nav__link">company</a><!-- /.p-global-nav__link -->
@@ -72,7 +72,7 @@
             <nav class="p-drawer__nav">
               <ul class="p-drawer-nav__list">
                 <li class="p-drawer-nav__item">
-                  <a href="/home" class="p-drawer-nav__link">home</a><!-- /.p-drawer-nav__link -->
+                  <a href="/home" class="p-drawer-nav__link">top</a><!-- /.p-drawer-nav__link -->
                 </li><!-- /.p-drawer-nav__item -->
                 <li class="p-drawer-nav__item">
                   <a href="" class="p-drawer-nav__link">company</a><!-- /.p-drawer-nav__link -->
@@ -151,7 +151,9 @@
     </section><!-- /.p-home-about -->
 
     <div class="p-home-parallax-movie">
-      <!-- <video src="./assets/fujiwara_movie.mp4" poster="./assets/img/video_img.jpg" muted autoplay playsinline loop></video> -->
+      <div class="p-home-parallax-movie__inner">
+        <video src="./assets/fujiwara_movie.mp4" poster="./assets/img/video_img.jpg" muted autoplay playsinline loop></video>
+      </div><!-- /.p-home-parallax-movie__inner -->
     </div><!-- /.p-top-parallax-video -->
 
     <section class="p-home-service">
@@ -380,9 +382,8 @@
       </div><!-- /.l-inner -->
     </section><!-- /.p-home-news -->
 
-    <div class="p-home-parallax-img">
-      <div class="p-home-parallax-img__bg">
-      </div><!-- /.p-home-parallax-img__bg -->
+    <div class="p-home-parallax-img" id="js-parallax">
+      
     </div><!-- /.p-home-parallax-img -->
 
     <section class="p-home-recruit">
@@ -445,8 +446,10 @@
     </div><!-- /.p-footer -->
   </footer><!-- /.l-footer -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="./assets/js/swiper.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

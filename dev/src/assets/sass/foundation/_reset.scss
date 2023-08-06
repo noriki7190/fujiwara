@@ -39,6 +39,16 @@ figure {
   vertical-align: baseline;
 }
 
+section {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+
+  // display: block;
+}
+
 html {
   line-height: 1;
 }
@@ -99,16 +109,16 @@ select {
 fieldset,
 legend {
   appearance: none;
-    background-color: #fff;
-    background-image: none;
-    border: 0;
-    border-radius: 0;
-    border: 0;
-    color: inherit;
-    font-family: inherit;
-    font-size: 1em;
-    padding: 0;
-    width: 100%;
+  background-color: #fff;
+  background-image: none;
+  border: 0;
+  border-radius: 0;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0;
+  width: 100%;
 }
 
 

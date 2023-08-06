@@ -4,6 +4,8 @@
   padding-top: 72px;
   padding-bottom: 112px;
   position: relative;
+  background: #fff;
+  z-index: 2;
 
   @include g.mq(tab) {
     padding-top: 260px;
