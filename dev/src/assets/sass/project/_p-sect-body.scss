@@ -16,7 +16,8 @@
 
 .p-sect-body__link {
   margin-top: 30px;
-  &>.c-btn-more {
+  .c-btn-more {
     margin-left: auto;
+    // text-align: right;
   }
 }

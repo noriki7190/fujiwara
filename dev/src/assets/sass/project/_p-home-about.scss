@@ -3,7 +3,8 @@
 .p-home-about {
   overflow: hidden;
   background: #fff;
-  z-index: 2;
+  position: relative;
+  z-index: 1;
 
   @include g.mq(tab) {
     padding-top: 141px;
@@ -23,6 +24,19 @@
 
 .p-home-about__img {
   // width: 100%;
+  position: relative;
+  // z-index: 3;
+  
+  img {
+
+    @include g.mq(sp) {
+      height: 274px;
+    }
+
+    @include g.mq(tab) {
+      
+    }
+  }
 
   @include g.mq(sp) {
     margin-right: -20px;
@@ -39,7 +53,7 @@
 .p-home-about__body {
   position: relative;
   padding-bottom: 40px;
-  z-index: 2;
+  // z-index: 2;
 
   @include g.mq(sp) {
     padding-top: 64px;
