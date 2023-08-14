@@ -1,0 +1,18 @@
+@use '../global' as g;
+
+.luminous {
+  img {
+    width: 300px;
+  }
+}
+.lum-img {
+  width: 500px;
+}
+
+.lum-open {
+  z-index: 100;
+}
+
+.lum-lightbox {
+  background: #182F20;
+}

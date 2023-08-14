@@ -14,6 +14,8 @@
   border-bottom: 1px solid g.$c-text;
   padding-bottom: 13px;
 
+  font-family: g.$ff-jp;
+
   @include g.mq(tab) {
     @include g.font(22, 30, 400);
     padding-bottom: 15px;
@@ -31,19 +33,13 @@
 
 .p-works-detail-contents-block__gallery {
   margin-top: 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
 
   @include g.mq(tab) {
     margin-top: 40px;
-    gap: 40px;
   }
 }
 
-.p-works-detail-contents-block__img {
-
-}
+.p-works-detail-contents-block__img {}
 
 .p-works-detail-contents-block__description {
   margin-top: 64px;
@@ -55,7 +51,7 @@
 
 .p-works-detail-contents__category-link {
   margin-top: 152px;
-  
+
   @include g.mq(tab) {
     margin-top: 170px;
   }

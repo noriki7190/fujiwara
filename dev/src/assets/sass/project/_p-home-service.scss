@@ -43,6 +43,12 @@
   }
 }
 
+.p-home-service__business {
+  @include g.mq(tab) {
+    // flex: 0 1 100%;
+  }
+}
+
 .p-home-service__loop-slide {
   margin-top: 112px;
 }

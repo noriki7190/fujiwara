@@ -10,6 +10,21 @@ const swiper1 = new Swiper('#swiper-work', {
   pagination: {
     el: '.swiper-pagination',
     type: "fraction",
+    // 数字を一桁の場合頭に０を追加する
+    formatFractionCurrent: function (number) {
+      if (number < 10) {
+        return '0' + number;
+      } else {
+        return number;
+      }
+    },
+    formatFractionTotal: function (number) {
+      if (number < 10) {
+        return '0' + number;
+      } else {
+        return number;
+      }
+    },
   },
 
   // Navigation arrows

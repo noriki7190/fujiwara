@@ -21,7 +21,11 @@
 }
 
 .p-home-works-slider__link {
-  cursor: url(../img/home/cursor_drag.png), pointer;
+  transition: .3s;
+  
+  &:hover {
+    cursor: url(../img/home/cursor_drag.png), pointer;
+  }
 }
 
 .p-home-works-slider__img {

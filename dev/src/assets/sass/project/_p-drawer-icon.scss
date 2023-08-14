@@ -18,7 +18,10 @@
   width: 22.5px;
   height: 2px;
   background: #000;
-  display: block;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
   &::after,
   &::before {
@@ -32,12 +35,12 @@
 
   &::before {
     width: 30px;
-    top: 0;
+    top: -10.5px;
   }
 
   &::after {
     width: 30px;
-    bottom: 0;
+    bottom: -10.5px;
     transform: scale(0.5, 1);
     transform-origin: left;
   }
@@ -47,8 +50,6 @@
 .p-drawer-btn {
   &.is-open {
     .p-drawer-btn__inline {
-      // transform: rotate(-45deg);
-      // background: transparent;
       background: 0;
 
       &::before {
@@ -60,7 +61,6 @@
         transform: scale(1, 1);
         transform: rotate(-45deg);
         transform-origin: left;
-        // width: 30px;
       }
     }
   }

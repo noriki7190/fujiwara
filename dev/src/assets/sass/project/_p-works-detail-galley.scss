@@ -1,0 +1,16 @@
+@use '../global' as g;
+
+.p-works-detail-galley {
+
+}
+
+.p-works-detail-galley__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @include g.mq(tab) {
+    gap: 40px;
+  }
+
+}

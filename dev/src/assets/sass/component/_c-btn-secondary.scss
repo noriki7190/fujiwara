@@ -5,4 +5,10 @@
   padding: 20px 35px;
   border: 1px solid #CBCBCB;
   display: inline-block;
+  transition: .3s;
+
+  &:hover {
+    background: g.$c-text;
+    color: #fff;
+  }
 }

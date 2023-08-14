@@ -27,8 +27,9 @@ const distBase = '../' + siteName;
 
 const srcPath = {
   'sass': srcBase + '/assets/sass/**/*.scss',
-  // 'js': srcBase + '/assets/js/**/*.js',
-  'js': './src/assets/js/**/*.js',
+  'css': srcBase + '/assets/css/*.css',
+  'js': srcBase + '/assets/js/**/*.js',
+  // 'js': './src/assets/js/**/*.js',
   'html': srcBase + '/**/*.html',
   'img': srcBase + '/assets/img/**/*'
 };
@@ -114,6 +115,7 @@ const browserSyncReload = (done) => {
 const watchFiles = () => {
   gulp.watch(srcPath.sass, gulp.series(compileSass, browserSyncReload));
   gulp.watch(srcPath.js, gulp.series(minJS, browserSyncReload));
+  gulp.watch(srcPath.css, gulp.series(copyCss, browserSyncReload));
   gulp.watch(srcPath.html, gulp.series(html, browserSyncReload));
   gulp.watch(srcPath.img, gulp.series(copyImg, browserSyncReload));
 }
@@ -133,6 +135,16 @@ const copyImg = () => {
     .pipe(gulp.dest(distPath.img))
 }
 
+/**
+ * css
+ */
+const copyCss = () => {
+  return gulp.src(srcPath.css)
+    .pipe(gulp.dest(distPath.css))
+  // console.log("css");
+  // done();
+}
+
 // テスト用
 const test = (done) => {
   console.log("Hello Gulp");
@@ -144,7 +156,7 @@ const test = (done) => {
  * parallelは並列で実行
  */
 exports.default = gulp.series(
-  gulp.parallel(html, compileSass, minJS, copyImg),
+  gulp.parallel(html, copyCss, compileSass, minJS, copyImg),
   gulp.parallel(watchFiles, browserSyncFunc)
 );
 
@@ -152,5 +164,6 @@ exports.test = test;
 exports.compileSass = compileSass;
 exports.minJS = minJS;
 exports.copyImg = copyImg;
+exports.copyCss = copyCss;
 
 exports.build = gulp.parallel(minJS, compileSass, copyImg);

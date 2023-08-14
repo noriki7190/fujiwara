@@ -22,6 +22,7 @@
   padding-left: 24px;
   width: 100%;
   height: 180px;
+  transition: .3s;
 
   span {
     @include g.font(12, 16, 500);
@@ -83,7 +84,7 @@
 
     &::before {
       border-bottom: 1px solid #fff;
-        border-right: 1px solid #fff;
+      border-right: 1px solid #fff;
     }
 
     &::after {
@@ -107,7 +108,11 @@
     .p-works-detail-contents-category-link__link {
       &:hover {
         background: g.$c-primary;
-        cursor: url(../img/works_detail/service_architecture_img.png), auto;
+
+        &+.p-works-detail-contents-category-link__img {
+          display: block;
+          opacity: 1;
+        }
       }
     }
   }
@@ -116,6 +121,11 @@
     .p-works-detail-contents-category-link__link {
       &:hover {
         background: g.$c-tertiary;
+
+        &+.p-works-detail-contents-category-link__img {
+          display: block;
+          opacity: 1;
+        }
       }
     }
   }
@@ -124,7 +134,27 @@
     .p-works-detail-contents-category-link__link {
       &:hover {
         background: g.$c-secondary;
+
+        &+.p-works-detail-contents-category-link__img {
+          display: block;
+          opacity: 1;
+        }
       }
     }
+  }
+}
+
+.p-works-detail-contents-category-link__img {
+  position: fixed;
+  z-index: 2;
+  // top: 0;
+  pointer-events: none;
+  // display: none;
+  transition: .3s opacity;
+  opacity: 0;
+
+  img {
+    width: 240px;
+    height: 280px;
   }
 }

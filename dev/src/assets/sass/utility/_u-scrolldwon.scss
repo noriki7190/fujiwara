@@ -1,0 +1,42 @@
+@use '../global' as g;
+
+.u-scrolldwon {
+  &::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 2px;
+    height: 200px;
+    background: #707070;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 2.4s ease-in-out infinite;
+    // opacity: 0;
+  }
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 1;
+  }
+
+  // 30% {
+  //   height: 200px;
+  //   opacity: 1;
+  // }
+    80% {
+      height: 200px;
+      top: 0;
+      opacity: 1;
+    }
+
+  100% {
+    height: 200px;
+    top: 0;
+    opacity: 1;
+  }
+}

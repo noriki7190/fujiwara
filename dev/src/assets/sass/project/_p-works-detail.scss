@@ -43,3 +43,8 @@
 .p-works-detail-contents__blocks {
   
 }
+
+.p-works-detail__link {
+  // width: 100%;
+  grid-column: 2 / 3;
+}
