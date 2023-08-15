@@ -138,11 +138,28 @@
     <div class="p-header__kv">
       <div class="p-kv">
         <div class="l-inner">
-          <!-- slider -->
-          <div class="p-kv__slider">
-            <p class="p-kv__business">Architecture</p><!-- /.p-kv__business -->
-            <figure class="p-kv__img"><img src="./assets/img/kv_slider01.png" alt=""></figure><!-- /.p-kv__img -->
-          </div><!-- /.p-kv__slider -->
+          <div class="swiper" id="swiper-kv">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="p-kv__slider">
+                  <p class="p-kv__business u-each-txt-anime">Architecture</p><!-- /.p-kv__business -->
+                  <figure class="p-kv__img"><img src="./assets/img/kv_slider01.png" alt=""></figure><!-- /.p-kv__img -->
+                </div><!-- /.p-kv__slider -->
+              </div><!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="p-kv__slider">
+                  <p class="p-kv__business u-each-txt-anime">Civil Engineering</p><!-- /.p-kv__business -->
+                  <figure class="p-kv__img"><img src="./assets/img/kv_slider02.png" alt=""></figure><!-- /.p-kv__img -->
+                </div><!-- /.p-kv__slider -->
+              </div><!-- /.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="p-kv__slider">
+                  <p class="p-kv__business u-each-txt-anime">Housing</p><!-- /.p-kv__business -->
+                  <figure class="p-kv__img"><img src="./assets/img/kv_slider03.png" alt=""></figure><!-- /.p-kv__img -->
+                </div><!-- /.p-kv__slider -->
+              </div><!-- /.swiper-slide -->
+            </div><!-- /.swiper-wrapper -->
+          </div><!-- /.swiper -->
           <div class="p-kv__catch-copy">
             <p class="p-kv__lead">How Far<br>Can<br class="u-is-sp">We Go?</p><!-- /.p-kv__catch -->
             <p class="p-kv__text">「どこまでいけるか」<br>お客さまと挑戦し続ける未来を<br class="u-is-sp">築いていきます。</p><!-- /.p-kv__text -->
@@ -159,7 +176,11 @@
         <figure class="p-home-about__img"><img src="./assets/img/home/home_about_img.jpg" alt=""></figure>
         <!-- /.p-home-about__img -->
         <div class="p-home-about__body p-sect-body">
-          <h2 class="c-sect-ttl">About<span>会社情報</span></h2><!-- /.c-sect-ttl -->
+          <h2 class="c-sect-ttl">
+            <span class="c-sect-ttl__dot"></span>
+            <span class="c-sect-ttl__en u-each-txt-anime">About</span>
+            <span class="c-sect-ttl__jp u-each-txt-anime">会社情報</span><!-- /.c-sect-ttl__jp -->
+          </h2><!-- /.c-sect-ttl -->
           <p class="p-sect-body__text">
             これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。<br>過去と未来を繋ぎ続ける」そんな会社を目指す技術集団が、藤原建設工業です。</p>
           <!-- /.p-sect-body__text -->
@@ -182,7 +203,11 @@
       <div class="p-home-service__inner l-inner">
         <div class="p-home-service__container">
           <div class="p-home-service__body p-sect-body">
-            <h2 class="c-sect-ttl">Service<span>事業内容</span></h2><!-- /.c-sect-ttl -->
+            <h2 class="c-sect-ttl">
+              <span class="c-sect-ttl__dot"></span>
+              <span class="c-sect-ttl__en u-each-txt-anime">Service</span>
+              <span class="c-sect-ttl__jp u-each-txt-anime">事業内容</span><!-- /.c-sect-ttl__jp -->
+            </h2><!-- /.c-sect-ttl -->
             <p class="p-sect-body__text">
               藤原建設工業では「建築事業」「土木事業」「住宅事業」の3つの事業を通してお客さまのお手伝いをさせていただいております。<br>事業内容ページでは、3つの柱をより具体的にご紹介します。
             </p>
@@ -261,7 +286,11 @@
 
     <section class="p-home-works">
       <div class="p-home-works__inner l-inner">
-        <h2 class="c-sect-ttl">Works<span>施工実績</span></h2><!-- /.c-sect-ttl -->
+        <h2 class="c-sect-ttl">
+          <span class="c-sect-ttl__dot"></span>
+          <span class="c-sect-ttl__en u-each-txt-anime">Works</span>
+          <span class="c-sect-ttl__jp u-each-txt-anime">施工実績</span><!-- /.c-sect-ttl__jp -->
+        </h2><!-- /.c-sect-ttl -->
         <!-- Slider main container -->
         <div class="p-home-works-slider swiper" id="swiper-work">
           <!-- TODO: カーソルホバー時のtransition -->
@@ -357,7 +386,11 @@
 
     <section class="p-home-news">
       <div class="l-inner">
-        <h2 class="c-sect-ttl">News<span>新着情報</span></h2><!-- /.c-sect-ttl -->
+        <h2 class="c-sect-ttl">
+          <span class="c-sect-ttl__dot"></span>
+          <span class="c-sect-ttl__en u-each-txt-anime">News</span>
+          <span class="c-sect-ttl__jp u-each-txt-anime">新着情報</span><!-- /.c-sect-ttl__jp -->
+        </h2><!-- /.c-sect-ttl -->
         <div class="p-home-news__contents p-news-contents">
           <ul class="p-news-contents__list">
             <!-- 新着記事を４記事出力 -->
@@ -420,7 +453,11 @@
     <section class="p-home-recruit">
       <div class="l-inner">
         <div class="p-home-recruit__body p-sect-body">
-          <h2 class="c-sect-ttl">Recruit<span>会社情報</span></h2><!-- /.c-sect-ttl -->
+          <h2 class="c-sect-ttl">
+            <span class="c-sect-ttl__dot"></span>
+            <span class="c-sect-ttl__en u-each-txt-anime">Recruit</span>
+            <span class="c-sect-ttl__jp u-each-txt-anime">採用情報</span><!-- /.c-sect-ttl__jp -->
+          </h2><!-- /.c-sect-ttl -->
           <p class="p-sect-body__text">
             藤原建設工業では、各職種にて新卒採用と中途採用を通年行っています。<br>これまで「過去と未来を繋ぎ続ける」に共感していただける仲間たちと歩んできました。<br>
             一緒に未来を築いていける方とお会いできるのを楽しみにしています。</p>

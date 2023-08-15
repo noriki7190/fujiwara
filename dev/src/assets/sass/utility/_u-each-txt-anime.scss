@@ -1,0 +1,22 @@
+@use '../global' as g;
+
+/*========= 1文字ずつ出現させるためのCSS ===============*/
+
+.u-each-txt-anime span {
+  opacity: 0;
+  display: inline-block;
+}
+
+.u-each-txt-anime.appeartext span {
+  animation: text_anime_on 1s ease-out forwards;
+}
+
+@keyframes text_anime_on {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

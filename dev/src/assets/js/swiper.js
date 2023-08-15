@@ -49,3 +49,4 @@ const swiper2 = new Swiper('#loop-img', {
     delay: 0, // 途切れなくループ
   },
 });
+
