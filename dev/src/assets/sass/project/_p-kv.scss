@@ -1,80 +1,75 @@
 @use '../global' as g;
 
 .p-kv {
-  position: relative;
-  padding-top: 270px;
-  padding-bottom: 145px;
   background: #fff;
-  z-index: 2;
 
-  @include g.mq(tab) {
-    height: 100vh;
-    padding-top: 337px;
-    padding-bottom: 0;
+  overflow: hidden;
+
+  .l-inner {
+    max-width: calc(100% - (50% - (1120px / 2)));
+    width: calc(100% - 80px);
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 0;
   }
 }
 
-.p-kv__catch-copy {
-  margin-top: 16px;
-  margin-left: 20px;
-}
+.p-kv__catch-copy {}
 
-.p-kv__lead {
-  @include g.font(48, 53, 700);
-  letter-spacing: .05em;
+.p-kv__lead {}
 
-  @include g.mq(tab) {
-    @include g.font(124, 125, 700);
-  }
-}
-
-.p-kv__text {
-  @include g.font(16, 36, 700);
-  letter-spacing: .15em;
-  font-family: g.$ff-jp;
-  margin-top: 23px;
-
-  @include g.mq(tab) {
-    @include g.font(22, 44, 700);
-  }
-}
+.p-kv__text {}
 
 .p-kv__slider {
+  // position: absolute;
+  // top: 0;
+  // left: 50%;
+  // // left: calc();
+  // left: 0;
+  // // margin-right: calc((50vw - 100%) * -1);
+  overflow: visible !important;
+}
+
+.p-kv__swiper {
   height: 100vh;
+  // padding-left: 180px;
+  // overflow: visible !important;
+}
+
+.swiper-slide {
+  
 }
 
 .p-kv__business {
   color: g.$c-primary;
   @include g.font(32, 36, 700);
-  
-  margin-left: 24px;
+  position: absolute;
+  top: 270px;
+  opacity: .7;
+ 
 
   @include g.mq(tab) {
     @include g.font(80, 89, 700);
-    
+    top: 337px;
+  }
+
+  &--civil {
+    color: g.$c-tertiary;
+  }
+  
+  &--hosing {
+    color: g.$c-secondary;
   }
 }
 
 .p-kv__img {
-  position: absolute;
-  top: 70px;
-  right: 0;
+  height: 100vh;
   z-index: -1;
-  width: calc(310 / 390 * 100%);
-  
+  padding-left: 180px;
 
   img {
-    height: 600px;
-    object-fit: cover;
-  }
-
-  @include g.mq(tab) {
-    top: 0;
-    width: calc(1060 / 1440 * 100%);
-
-    img {
-      height: 100vh;
-    }
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -2,13 +2,22 @@ new LuminousGallery(document.querySelectorAll(".luminous"));
 
 const swiper_kv = new Swiper("#swiper-kv", {
   loop: true,
-  // allowTouchMove: false,
+  allowTouchMove: false,
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
     reverseDirection: true,
   },
-  // effect: "coverflow",
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      // shadow: true,
+      translate: [0, 0, 0],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
+  },
 });
 
 jQuery(function ($) {
