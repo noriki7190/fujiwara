@@ -1,0 +1,10 @@
+@use '../global' as g;
+
+#swiper-loop {
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+  .swiper-slide {
+    max-width: 280px;
+  }
+}

@@ -135,6 +135,21 @@
       </div><!-- /.p-header__inner -->
     </div><!-- /.p-header -->
 
+    <div class="p-loading">
+      <div class="p-loading__logo" id="js-loading-logo">
+        <img src="./assets/img/logo-loading.png" alt="">
+      </div><!-- /.p-loading__logo -->
+      <div class="l-inner">
+        <div class="p-loading__catch-copy">
+          <span class="u-each-txt-anime">How Far</span><br><span class="u-each-txt-anime">Can <br
+              class="u-is-sp">We Go?</span>
+        </div><!-- /.p-loading__catch-copy -->
+    
+      </div><!-- /.l-inner -->
+      <div class="p-loading__bg-green"></div><!-- /.p-loading__bg-green -->
+      <div class="p-loading__bg-white"></div><!-- /.p-loading__bg-white -->
+    </div><!-- /.p-loading -->
+
 
     <div class="p-header__kv">
       <div class="p-kv">
@@ -146,7 +161,8 @@
                 <figure class="p-kv__img"><img src="./assets/img/kv_slider01.png" alt=""></figure><!-- /.p-kv__img -->
               </div><!-- /.swiper-slide -->
               <div class="swiper-slide">
-                <p class="p-kv__business p-kv__business--civil u-each-txt-anime">Civil Engineering</p><!-- /.p-kv__business -->
+                <p class="p-kv__business p-kv__business--civil u-each-txt-anime">Civil Engineering</p>
+                <!-- /.p-kv__business -->
                 <figure class="p-kv__img"><img src="./assets/img/kv_slider02.png" alt=""></figure><!-- /.p-kv__img -->
               </div><!-- /.swiper-slide -->
               <div class="swiper-slide">
@@ -156,10 +172,8 @@
             </div><!-- /.swiper-wrapper -->
           </div><!-- /.swiper -->
         </div><!-- /.l-inner -->
-        <div class="p-kv__catch-copy">
-          <p class="p-kv__lead">How Far<br>Can<br class="u-is-sp">We Go?</p><!-- /.p-kv__catch -->
-          <p class="p-kv__text">「どこまでいけるか」<br>お客さまと挑戦し続ける未来を<br class="u-is-sp">築いていきます。</p><!-- /.p-kv__text -->
-        </div><!-- /.p-kv__catch-copy -->
+        <p class="p-kv__text">「どこまでいけるか」<br>お客さまと挑戦し続ける未来を<br class="u-is-sp">築いていきます。</p><!-- /.p-kv__text -->
+
         <div class="p-kv__scrolldown u-scrolldwon"></div><!-- /.p-kv__scrolldown -->
       </div><!-- /.p-kv -->
     </div><!-- /.p-header__kv -->
@@ -252,30 +266,40 @@
         </div><!-- /.p-home-service-business -->
       </div><!-- /.p-home-service__inner -->
       <div class="p-home-service__loop-slide p-loop-img">
-        <ul class="p-loop-img__list">
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-        </ul><!-- /.p-loop-img__list -->
-        <ul class="p-loop-img__list">
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-          <li class="p-loop-img__item"><img src="./assets/img/home/home_slider_img01.jpg" alt=""></li>
-          <!-- /.p-loop-img__item -->
-        </ul><!-- /.p-loop-img__list -->
+        <div class="swiper" id="swiper-loop">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img01.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img02.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img03.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img04.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img05.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img01.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img02.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img03.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img04.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/home/home_slider_img05.jpg" alt="" />
+            </div>
+          </div>
+        </div>
       </div><!-- /.p-home-service__loop-slide -->
     </section><!-- /.p-home-service -->
 

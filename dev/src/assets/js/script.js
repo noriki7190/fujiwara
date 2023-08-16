@@ -3,11 +3,13 @@ new LuminousGallery(document.querySelectorAll(".luminous"));
 const swiper_kv = new Swiper("#swiper-kv", {
   loop: true,
   allowTouchMove: false,
+  speed: 1000,
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
     reverseDirection: true,
   },
+
   effect: "creative",
   creativeEffect: {
     prev: {
@@ -19,6 +21,32 @@ const swiper_kv = new Swiper("#swiper-kv", {
     },
   },
 });
+
+const swiper_loop = new Swiper('#swiper-loop', {
+  loop: true, // ループ有効
+  slidesPerView: 5, // 一度に表示する枚数
+  speed: 6000, // ループの時間
+  allowTouchMove: false, // スワイプ無効
+  spaceBetween: 40,
+  loopAdditionalSlides: 5,
+  slidesPerView: 5,
+  height: 280,
+  autoplay: {
+    delay: 0, // 途切れなくループ
+  },
+});
+
+// ローディング
+// document.querySelector('#js-loading-logo').animate(
+//   [
+//     { opacity: 1 },
+//     { opacity: 0 }
+//   ],
+//   {
+//     duration: 3000,
+//     fill: 'forwards'
+//   }
+// );
 
 jQuery(function ($) {
   // アコーディオンメニュー
@@ -140,21 +168,6 @@ jQuery(function ($) {
 
   // eachTextAnimeにappeartextというクラス名を付ける定義
   function EachTextAnimeControl() {
-    $('.eachTextAnime').each(function () {
-      var elemPos = $(this).offset().top - 50;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll >= elemPos - windowHeight) {
-        $(this).addClass("appeartext");
-
-      } else {
-        $(this).removeClass("appeartext");
-      }
-    });
-  }
-
-  // eachTextAnimeにappeartextというクラス名を付ける定義
-  function EachTextAnimeControl() {
     $('.u-each-txt-anime').each(function () {
       var elemPos = $(this).offset().top - 50;
       var scroll = $(window).scrollTop();
@@ -175,7 +188,7 @@ jQuery(function ($) {
 
   // 画面が読み込まれたらすぐに動かしたい場合の記述
   $(window).on('load', function () {
-    
+
     //spanタグを追加する
     var element = $(".u-each-txt-anime");
     element.each(function () {
@@ -187,7 +200,7 @@ jQuery(function ($) {
             textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
           } else {
             var n = i / 10;
-            textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+            textbox += '<span style="animation-delay:.' + n + 's;">' + t + '</span>';
           }
 
         } else {
