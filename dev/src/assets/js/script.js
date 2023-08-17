@@ -1,23 +1,26 @@
 new LuminousGallery(document.querySelectorAll(".luminous"));
 
 const swiper_kv = new Swiper("#swiper-kv", {
-  loop: true,
-  allowTouchMove: false,
-  speed: 1000,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
+  loop: true, // ループさせる
+  parallax: true, // パララックスさせる
+  // allowTouchMove: false, // マウスでのスワイプを禁止
+  speed: 1500, // 少しゆっくり(デフォルトは300)
+  autoplay: { // 自動再生
+    delay: 2000, // 2秒後に次のスライド
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
     reverseDirection: true,
   },
+  // effect: 'coverflow',
 
   effect: "creative",
   creativeEffect: {
     prev: {
-      // shadow: true,
+      // 前のスライドのZ軸（奥行）対して(-400px)を設定しています
       translate: [0, 0, 0],
     },
     next: {
-      translate: ["100%", 0, 0],
+      // 次のスライドのX軸（左右）対して(100%)を設定しています
+      translate: ["100%", 0, 1],
     },
   },
 });
@@ -179,6 +182,7 @@ jQuery(function ($) {
         $(this).removeClass("appeartext");
       }
     });
+
   }
 
   // 画面をスクロールをしたら動かしたい場合の記述
@@ -200,7 +204,7 @@ jQuery(function ($) {
             textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
           } else {
             var n = i / 10;
-            textbox += '<span style="animation-delay:.' + n + 's;">' + t + '</span>';
+            textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
           }
 
         } else {

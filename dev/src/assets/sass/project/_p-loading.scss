@@ -9,6 +9,9 @@
   display: grid;
   place-items: center;
   // background: #fff;
+  overflow: hidden;
+
+  // display: none;
 }
 
 .p-loading__logo {
@@ -31,6 +34,19 @@
 
   @include g.mq(tab) {
     @include g.font(124, 125, 700);
+  }
+}
+
+.p-loading__text {
+  position: absolute;
+  bottom: 64px;
+
+  @include g.font(16, 36, 700);
+  font-family: g.$ff-jp;
+  letter-spacing: .15em;
+
+  @include g.mq(tab) {
+    @include g.font(22, 44, 700);
   }
 }
 
@@ -91,7 +107,9 @@
 }
 
 @keyframes bgWhite {
-  0%, 80% {
+
+  0%,
+  80% {
     transform: translateX(0);
   }
 

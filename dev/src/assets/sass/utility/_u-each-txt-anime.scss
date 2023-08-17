@@ -11,8 +11,25 @@
   animation: text_anime_on 1s ease-out forwards;
 }
 
+.u-each-txt-anime--loading.appeartext span {
+  animation-name: text_anime_on_loading;
+  // animation-delay: 1.6s;
+  animation-duration: 2.8s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes text_anime_on {
   0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text_anime_on_loading {
+  0%, 90% {
     opacity: 0;
   }
 

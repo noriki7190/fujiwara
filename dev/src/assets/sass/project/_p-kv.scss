@@ -2,12 +2,12 @@
 
 .p-kv {
   background: #fff;
-
+  position: relative;
   overflow: hidden;
 
   .l-inner {
-    max-width: calc(100% - (50% - (1120px / 2)));
-    width: calc(100% - 80px);
+    max-width: calc(100% - (50% - (1040px / 2)));
+    width: calc(100% - 40px);
     margin-right: 0;
     margin-left: auto;
     padding-right: 0;
@@ -18,8 +18,6 @@
 
 .p-kv__lead {}
 
-.p-kv__text {}
-
 .p-kv__slider {
   // position: absolute;
   // top: 0;
@@ -27,7 +25,7 @@
   // // left: calc();
   // left: 0;
   // // margin-right: calc((50vw - 100%) * -1);
-  overflow: visible !important;
+  // overflow: visible !important;
 }
 
 .p-kv__swiper {
@@ -36,17 +34,17 @@
   // overflow: visible !important;
 }
 
-.swiper-slide {
-  
-}
+.swiper-slide {}
 
 .p-kv__business {
   color: g.$c-primary;
   @include g.font(32, 36, 700);
   position: absolute;
+  z-index: 51;
   top: 270px;
+  left: 0;
   opacity: .7;
- 
+
 
   @include g.mq(tab) {
     @include g.font(80, 89, 700);
@@ -56,20 +54,22 @@
   &--civil {
     color: g.$c-tertiary;
   }
-  
+
   &--hosing {
     color: g.$c-secondary;
   }
 }
 
 .p-kv__img {
-  height: 100vh;
-  z-index: -1;
-  padding-left: 180px;
+  overflow: hidden;
+}
 
+.swiper-slide-active .p-kv__img ,
+.swiper-slide-duplicate-active .p-kv__img ,
+.swiper-slide-prev .p-kv__img
+  {
   img {
-    width: 100%;
-    height: 100%;
+    animation: zoom-in 10s linear 0s 1 normal both;
   }
 }
 
@@ -81,4 +81,14 @@
   width: 2px;
   background: #fff;
   z-index: 10;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
 }

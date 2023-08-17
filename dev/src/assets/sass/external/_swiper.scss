@@ -4,7 +4,39 @@
   .swiper-wrapper {
     transition-timing-function: linear;
   }
+
   .swiper-slide {
     max-width: 280px;
+  }
+}
+
+#swiper-kv {
+  &.swiper {
+    overflow: visible !important;
+    
+  }
+
+  .swiper-slide {
+    padding-left: 180px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 183px;
+      height: 100%;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 50;
+    }
+
+    img {
+      height: 100vh;
+    }
+  }
+
+  .swiper-container {
+    // overflow: visible !important;
   }
 }
