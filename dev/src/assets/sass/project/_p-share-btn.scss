@@ -10,9 +10,62 @@
 }
 
 .p-share-btn__item {
-
+  // height: 60px;
+  width: 100%;
 }
 
 .p-share-btn__link {
+  display: inline-block;
+  padding: 20px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
 
+  &:hover {
+    opacity: .7;
+  }
+
+  &--twitter {
+    background: #3C96EB;
+  }
+
+  &--facebook {
+    background: #36529A;
+  }
+
+  &--clipboard {
+    background: #CBCBCB;
+  }
+}
+
+@keyframes fade-tooltip {
+  to {
+    opacity: 0;
+  }
+}
+
+.js-copied::before {
+  content: 'URLをコピーしました！';
+  white-space: nowrap;
+  display: inline-block;
+  position: absolute;
+  top: -18px;
+  right: 0;
+  // transform: translate(50%, -120%);
+  @include g.font(12, 12, 500);
+  font-family: g.$ff-jp;
+  animation-name: fade-tooltip;
+  animation-duration: .5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  color: g.$c-text;
+
+  @include g.mq(tab) {
+    @include g.font(11, 11, 500);
+    right: 80px;
+    top: -21px;
+  }
 }

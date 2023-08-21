@@ -76,12 +76,15 @@
 
 .p-news-contents__label {
   display: inline-block;
-  padding: 6px 20px 6px 12px;
+  // padding: 6px 20px 6px 12px;
+  padding: 3px 10px;
   border: 1px solid #333;
   @include g.font(12, 16, 400);
   font-family: g.$ff-jp;
   margin-left: 24px;
   transition: .3s all ease;
+  min-width: 80px;
+  text-align: center;
 }
 
 .p-news-contents__ttl {

@@ -1,20 +1,17 @@
 @use '../global' as g;
 
-.p-global-nav {
-}
+.p-global-nav {}
 
 .p-global-nav__list {
   display: flex;
   gap: 40px;
+
+  a {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+  }
 }
 
-.p-global-nav__item {
+.p-global-nav__item {}
 
-}
-
-.p-global-nav__link {
-  text-transform: uppercase;
-  letter-spacing: .15em;
-
-  
-}
+.p-global-nav__link {}

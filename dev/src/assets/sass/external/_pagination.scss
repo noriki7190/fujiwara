@@ -1,0 +1,39 @@
+@use '../global' as g;
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-numbers {
+  @include g.font(20, 22, 400);
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: #cbcbcb;
+  border: 1px solid #CBCBCB;
+  color: #fff;
+  // display: flex;
+  // align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.current {
+    background: g.$c-primary;
+  }
+}
+
+.prev.page-numbers,
+.next.page-numbers {
+  background: url(../img/iconmonstr-angel-down-thin.svg) no-repeat center center /contain;
+  width: 21px;
+  height: 32px;
+  border: none;
+}
+
+.next.page-numbers {
+  transform: rotate(180deg);
+}

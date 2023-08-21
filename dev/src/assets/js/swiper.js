@@ -50,3 +50,40 @@ const swiper2 = new Swiper('#loop-img', {
   },
 });
 
+const swiper_kv = new Swiper("#swiper-kv", {
+  loop: true, // ループさせる
+  parallax: true, // パララックスさせる
+  // allowTouchMove: false, // マウスでのスワイプを禁止
+  speed: 1500, // 少しゆっくり(デフォルトは300)
+  autoplay: { // 自動再生
+    delay: 2000, // 2秒後に次のスライド
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    reverseDirection: true,
+  },
+
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      // 前のスライドのZ軸（奥行）対して(-400px)を設定しています
+      translate: [0, 0, 0],
+    },
+    next: {
+      // 次のスライドのX軸（左右）対して(100%)を設定しています
+      translate: ["100%", 0, 1],
+    },
+  },
+});
+
+const swiper_loop = new Swiper('#swiper-loop', {
+  loop: true, // ループ有効
+  slidesPerView: 5, // 一度に表示する枚数
+  speed: 6000, // ループの時間
+  allowTouchMove: false, // スワイプ無効
+  spaceBetween: 40,
+  loopAdditionalSlides: 5,
+  slidesPerView: 5,
+  height: 280,
+  autoplay: {
+    delay: 0, // 途切れなくループ
+  },
+});

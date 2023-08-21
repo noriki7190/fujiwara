@@ -24,7 +24,7 @@
     @include g.font(20, 27, 700);
   }
 
-  &.is-active {
+  &.is-current {
     color: g.$c-text;
   }
 }

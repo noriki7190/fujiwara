@@ -17,6 +17,12 @@
   &:last-child {
     border-bottom: 1px solid #CBCBCB;
   }
+
+  &:first-child {
+    .p-accordion__body {
+      display: block;
+    }
+  }
 }
 
 .p-accordion__head {

@@ -2,7 +2,7 @@
 
 .p-post-contents {
 
-  h3 {
+  h2 {
     margin-top: 44px;
     @include g.font(18, 27, 400);
     letter-spacing: .15em;
@@ -30,7 +30,7 @@
     }
   }
 
-  h4 {
+  h3 {
     margin-top: 66px;
     @include g.font(16, 21, 400);
     padding-bottom: 13px;

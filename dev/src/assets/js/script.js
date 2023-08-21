@@ -1,57 +1,11 @@
-new LuminousGallery(document.querySelectorAll(".luminous"));
+// new LuminousGallery(document.querySelectorAll(".luminous"));
+// console.log('javascript');
 
-const swiper_kv = new Swiper("#swiper-kv", {
-  loop: true, // ループさせる
-  parallax: true, // パララックスさせる
-  // allowTouchMove: false, // マウスでのスワイプを禁止
-  speed: 1500, // 少しゆっくり(デフォルトは300)
-  autoplay: { // 自動再生
-    delay: 2000, // 2秒後に次のスライド
-    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-    reverseDirection: true,
-  },
-  // effect: 'coverflow',
 
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      // 前のスライドのZ軸（奥行）対して(-400px)を設定しています
-      translate: [0, 0, 0],
-    },
-    next: {
-      // 次のスライドのX軸（左右）対して(100%)を設定しています
-      translate: ["100%", 0, 1],
-    },
-  },
-});
-
-const swiper_loop = new Swiper('#swiper-loop', {
-  loop: true, // ループ有効
-  slidesPerView: 5, // 一度に表示する枚数
-  speed: 6000, // ループの時間
-  allowTouchMove: false, // スワイプ無効
-  spaceBetween: 40,
-  loopAdditionalSlides: 5,
-  slidesPerView: 5,
-  height: 280,
-  autoplay: {
-    delay: 0, // 途切れなくループ
-  },
-});
-
-// ローディング
-// document.querySelector('#js-loading-logo').animate(
-//   [
-//     { opacity: 1 },
-//     { opacity: 0 }
-//   ],
-//   {
-//     duration: 3000,
-//     fill: 'forwards'
-//   }
-// );
 
 jQuery(function ($) {
+
+
   // アコーディオンメニュー
   $('.js-accordion').on('click', function () {
     // console.log('click')
@@ -216,4 +170,20 @@ jQuery(function ($) {
 
     EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+  // clipboard.js
+  new ClipboardJS('#js-clipboard');
+
+  let board = document.querySelector('#js-clipboard');
+  if (board) {
+    board.addEventListener('click', function () {
+      board.classList.add('js-copied');
+      board.addEventListener('animationend', function () {
+        board.classList.remove('js-copied');
+      })
+    })
+  }
+  // console.log(board);
+
+
 });

@@ -8,7 +8,7 @@ const browserSync = require("browser-sync"); //ブラウザリロード
 const sassGlob = require('gulp-sass-glob-use-forward')
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const cssSorter =require("css-declaration-sorter"); // css並び替え
+const cssSorter = require("css-declaration-sorter"); // css並び替え
 const mmq = require("gulp-merge-media-queries"); // メディアクエリーをまとめる
 // css js ファイルの圧縮
 const cleanCss = require("gulp-clean-css");
@@ -31,6 +31,7 @@ const srcPath = {
   'js': srcBase + '/assets/js/**/*.js',
   // 'js': './src/assets/js/**/*.js',
   'html': srcBase + '/**/*.html',
+  'php': srcBase + '/**/*.php',
   'img': srcBase + '/assets/img/**/*'
 };
 
@@ -38,6 +39,7 @@ const distPath = {
   'css': distBase + '/assets/css/',
   'js': distBase + '/assets/js/',
   'html': distBase + '/',
+  'php': distBase + '/',
   'img': distBase + '/assets/img/'
 };
 
@@ -69,10 +71,10 @@ const compileSass = () => {
     }))
     .pipe(gulp.dest(distPath.css))
     .pipe(browserSync.stream())
-    // .pipe(notify({
-    //   message: 'Sassをコンパイルしました！',
-    //   onLast: true
-    // }))
+  // .pipe(notify({
+  //   message: 'Sassをコンパイルしました！',
+  //   onLast: true
+  // }))
 }
 
 
@@ -84,14 +86,28 @@ const html = () => {
     .pipe(gulp.dest(distPath.html))
 }
 
+const php = () => {
+  return gulp.src(srcPath.php)
+    .pipe(gulp.dest(distPath.php))
+}
+
 /**
  * ローカルサーバー立ち上げ
  */
-const browserSyncFunc = () => {
+const browserSyncFunc = (done) => {
+  // browserSync.init(browserSyncOption);
+  browserSync.init({
+    proxy: "http://" + siteName + ".local/"
+  });
+  done();
+}
+
+const browserSyncFuncWP = () => {
   browserSync.init(browserSyncOption);
-    // browserSync.init({
-  //   // proxy: "http://" + siteName  +".local/"
-  // });
+  browserSync.init({
+    // proxy: "http://" + siteName  +".local/"
+    proxy: "http://fujiwara.local/"
+  });
 }
 
 const browserSyncOption = {
@@ -117,6 +133,7 @@ const watchFiles = () => {
   gulp.watch(srcPath.js, gulp.series(minJS, browserSyncReload));
   gulp.watch(srcPath.css, gulp.series(copyCss, browserSyncReload));
   gulp.watch(srcPath.html, gulp.series(html, browserSyncReload));
+  gulp.watch(srcPath.php, gulp.series(php, browserSyncReload));
   gulp.watch(srcPath.img, gulp.series(copyImg, browserSyncReload));
 }
 
@@ -156,8 +173,13 @@ const test = (done) => {
  * parallelは並列で実行
  */
 exports.default = gulp.series(
-  gulp.parallel(html, copyCss, compileSass, minJS, copyImg),
+  gulp.parallel(html, php, copyCss, compileSass, minJS, copyImg),
   gulp.parallel(watchFiles, browserSyncFunc)
+);
+
+exports.wp_dev = gulp.series(
+  gulp.parallel(html, php, copyCss, compileSass, minJS, copyImg),
+  gulp.parallel(watchFiles, browserSyncFuncWP)
 );
 
 exports.test = test;
