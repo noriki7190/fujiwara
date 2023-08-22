@@ -1,26 +1,131 @@
 @use '../global' as g;
 
-.p-service-sect {
-  min-height: 100vh;
-  width: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  // background-size: cover;
-  top: 0;
-  left: 0;
+.p-service-list__item {
+  height: 100vh;
 
+  // &+& {
+  //   margin-top: 100vh;
+  // }
+  &:last-child {
+    margin-top: 100vh;
+
+  }
+}
+
+.p-service-sect {
+  // min-height: 100vh;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 45%;
+  background-size: cover;
+  // background-size: 80%;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  z-index: 2;
   
-  
+  @include g.mq(tab) {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .c-sect-ttl-level2 span,
+  .c-btn-more {
+    color: #fff;
+  }
+
+  .c-btn-more__inline {
+    border: 1px solid #fff;
+
+    &::before,
+    &::after {
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+    }
+  }
+
+  // background: url(../img/service/service_architecture_img.jpg) no-repeat center center / cover;
+
   &--architecture {
-    background: url(../img/service/service_architecture_img.jpg);
+    background-image: url(../img/service/service_architecture_img.jpg);
   }
 
   &--civil {
-    background: url(../img/service_civil_img.jpg);
+    background-image: url(../img/service_civil_img.jpg);
+    opacity: 0;
+    transition: .3s opacity;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+
+    &.is-fixed {
+      opacity: 1;
+      transition: .3s opacity;
+      // z-index: 10;
+    }
   }
 
   &--housing {
-    background: url(../img/service/service_housing_img.jpg);
+    background-image: url(../img/service/service_housing_img.jpg);
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .2);
+    z-index: -1;
+
+  }
+
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    // z-index: 2;
+  }
+}
+
+.p-p-service-sect__inner {
+  max-width: 960px;
+  display: grid;
+  
+  @include g.mq(tab) {
+    grid-template-columns: 1fr 355px;
+  }
+}
+
+.p-service-sect__lead {
+  @include g.font(20, 29, 400);
+  @include g.mq(sp) {
+    margin-top: 41px;
+  }
+
+  @include g.mq(tab) {
+    @include g.font(28, 40, 400);
+  }
+}
+
+.p-service-sect__text {
+  @include g.font(15, 28, 400);
+  margin-top: 24px;
+
+  @include g.mq(tab) {
+    margin-top: 33px;
+  }
+}
+
+.p-service-sect__link {
+  margin-top: 32px;
+
+  @include g.mq(tab) {
+    margin-top: 56px;
   }
 }

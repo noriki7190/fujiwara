@@ -8,30 +8,34 @@
 .p-recruit-job-tab__item {
   flex: 0 1 calc(100% / 3);
   text-align: center;
-
-  &+& {
-    border-left: 1px solid #B4B4B4;
-  }
-
-  &.--current {
-    .p-recruit-job__link {
-      background: g.$c-primary;
-      color: #fff;
-    }
-  }
-}
-
-.p-recruit-job__link {
-  width: 100%;
+  // width: 100%;
   padding: 15px 0 16px;
   display: inline-block;
   background: #F0F0F0;
   color: #B4B4B4;
   @include g.font(15, 21, 700);
   letter-spacing: .15em;
+  transition: .3s;
+  cursor: pointer;
 
   @include g.mq(tab) {
     @include g.font(18, 26, 700);
     padding: 21px 0;
   }
+
+  &+& {
+    border-left: 1px solid #B4B4B4;
+  }
+
+  &.is-current {
+    background: g.$c-primary;
+    color: #fff;
+  }
+
+  &:hover {
+    opacity: .7;
+    transition: .3s;
+  }
 }
+
+.p-recruit-job__link {}

@@ -34,28 +34,28 @@
         <h2 class="p-recruit-faq__ttl c-sect-ttl-level2">FAQ<span>よくある質問</span></h2><!-- /.p-recruit-faq__ttl -->
         <div class="p-recruit-faq__body p-accordion">
           <ul class="p-accordion__list">
+<?php
+$counter = 0;
+if( have_rows('faq') ):
+  while ( have_rows('faq') ) : the_row();
+  $counter++;
+  // echo $counter;
+  if ($counter === 1) :
+?>
             <li class="p-accordion__item">
-              <button class="p-accordion__head js-accordion is-open">高校卒業後でもエントリーは可能ですか？<span
-                  class="p-accordion__icon"></span></button><!-- /.p-accordion__head -->
-              <p class="p-accordion__body">はい、可能です。<br>ただし、エントリーできる職種に制限がある場合がございますので、下記の募集要項をご覧ください。
-              </p><!-- /.p-accordion__body -->
+              <button class="p-accordion__head js-accordion is-open"><?php the_sub_field('question'); ?><span class="p-accordion__icon"></span></button><!-- /.p-accordion__head -->
+              <p class="p-accordion__body"><?php the_sub_field('answer'); ?></p><!-- /.p-accordion__body -->
             </li><!-- /.p-accordion__item -->
+<?php else: ?>
             <li class="p-accordion__item">
-              <button class="p-accordion__head js-accordion">エントリー方法について教えてください。<span
-                  class="p-accordion__icon"></span></button><!-- /.p-accordion__head -->
-              <p class="p-accordion__body">募集要項の下部にエントリーフォームへのリンクがありますので、そちらからエントリーください。</p><!-- /.p-accordion__body -->
+              <button class="p-accordion__head js-accordion"><?php the_sub_field('question'); ?><span class="p-accordion__icon"></span></button><!-- /.p-accordion__head -->
+              <p class="p-accordion__body"><?php the_sub_field('answer'); ?></p><!-- /.p-accordion__body -->
             </li><!-- /.p-accordion__item -->
-            <li class="p-accordion__item">
-              <button class="p-accordion__head js-accordion">資格取得支援制度のようなものはありますか？<span
-                  class="p-accordion__icon"></span></button><!-- /.p-accordion__head -->
-              <p class="p-accordion__body">はい、ございます。詳細はお問い合わせフォームよりご連絡ください。</p><!-- /.p-accordion__body -->
-            </li><!-- /.p-accordion__item -->
-            <li class="p-accordion__item">
-              <button class="p-accordion__head js-accordion">必要な資格が知りたいです。<span
-                  class="p-accordion__icon"></span></button><!-- /.p-accordion__head -->
-              <p class="p-accordion__body">募集要項の「応募資格」の欄をご覧ください。資格の必要のない職種もございますので、募集要項を参照ください。</p>
-              <!-- /.p-accordion__body -->
-            </li><!-- /.p-accordion__item -->
+<?php
+    endif;
+  endwhile;
+endif;
+?>
           </ul><!-- /.p-accordion__list -->
         </div><!-- /.p-recruit-faq__body -->
       </div><!-- /.p-recruit-faq__inner -->
@@ -67,58 +67,71 @@
         <!-- /.p-recruit-faq__ttl -->
         <div class="p-recruit-job__tab">
           <ul class="p-recruit-job-tab">
-            <li class="p-recruit-job-tab__item --current"><a href=""
-                class="p-recruit-job__link">建設業務</a><!-- /.p-recruit-job__link --></li>
+            <li class="p-recruit-job-tab__item is-current">建設業務</li>
             <!-- /.p-recruit-job-tab__item -->
-            <li class="p-recruit-job-tab__item"><a href=""
-                class="p-recruit-job__link">事務業務</a><!-- /.p-recruit-job__link --></li>
+            <li class="p-recruit-job-tab__item">事務業務</li>
             <!-- /.p-recruit-job-tab__item -->
-            <li class="p-recruit-job-tab__item"><a href=""
-                class="p-recruit-job__link">営業業務</a><!-- /.p-recruit-job__link --></li>
+            <li class="p-recruit-job-tab__item">営業業務</li>
             <!-- /.p-recruit-job-tab__item -->
           </ul><!-- /.p-recruit-job-tab -->
         </div><!-- /.p-recruit-job__tab -->
         <div class="p-recruit-job__description p-recruit-job-description">
           <ul class="p-recruit-job-description__list">
-            <li class="p-recruit-job-description__item">
+            <li class="p-recruit-job-description__item is-current" id="js-tab-construction">
               <h3 class="p-recruit-job-description__ttl">建設業務</h3><!-- /.p-recruit-job-description__ttl -->
               <dl class="p-description-list p-recruit-job-description__dl">
+<?php
+if( have_rows('construction') ):
+  while ( have_rows('construction') ) : the_row();
+?>
                 <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">職種</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">現場での建設業務</dd><!-- /.p-description-list__dd -->
+                  <dt class="p-description-list__dt"><?php the_sub_field('dt'); ?></dt><!-- /.p-description-list__dt -->
+                  <dd class="p-description-list__dd"><?php the_sub_field('dd'); ?></dd><!-- /.p-description-list__dd -->
                 </div><!-- /.p-company-information__row -->
+<?php
+  endwhile;
+endif;
+?>
+                <div class="p-recruit-job-description__btn"><a href="entry.html" class="c-btn-light">エントリー</a></div>
+                <!-- /.p-recruit-job-description__btn -->
+              </dl><!-- /.p-company-information__list -->
+            </li><!-- /.p-recruit-job-description__item -->
+
+            <li class="p-recruit-job-description__item" id="js-tab-office">
+              <h3 class="p-recruit-job-description__ttl">事務業務</h3><!-- /.p-recruit-job-description__ttl -->
+              <dl class="p-description-list p-recruit-job-description__dl">
+<?php
+if( have_rows('office') ):
+  while ( have_rows('office') ) : the_row();
+?>
                 <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">給与</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">月給300,000円〜</dd><!-- /.p-description-list__dd -->
+                  <dt class="p-description-list__dt"><?php the_sub_field('dt'); ?></dt><!-- /.p-description-list__dt -->
+                  <dd class="p-description-list__dd"><?php the_sub_field('dd'); ?></dd><!-- /.p-description-list__dd -->
                 </div><!-- /.p-company-information__row -->
+<?php
+  endwhile;
+endif;
+?>
+                <div class="p-recruit-job-description__btn"><a href="entry.html" class="c-btn-light">エントリー</a></div>
+                <!-- /.p-recruit-job-description__btn -->
+              </dl><!-- /.p-company-information__list -->
+            </li><!-- /.p-recruit-job-description__item -->
+
+            <li class="p-recruit-job-description__item" id="js-tab-sales">
+              <h3 class="p-recruit-job-description__ttl">営業業務</h3><!-- /.p-recruit-job-description__ttl -->
+              <dl class="p-description-list p-recruit-job-description__dl">
+<?php
+if( have_rows('sales') ):
+  while ( have_rows('sales') ) : the_row();
+?>
                 <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">雇用形態</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">正社員（試用期間3ヶ月）</dd><!-- /.p-description-list__dd -->
+                  <dt class="p-description-list__dt"><?php the_sub_field('dt'); ?></dt><!-- /.p-description-list__dt -->
+                  <dd class="p-description-list__dd"><?php the_sub_field('dd'); ?></dd><!-- /.p-description-list__dd -->
                 </div><!-- /.p-company-information__row -->
-                <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">交通費</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">10,000円まで支給</dd><!-- /.p-description-list__dd -->
-                </div><!-- /.p-company-information__row -->
-                <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">勤務場所</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">〒000-0000<br>千葉県◯◯市◯◯丁目◯◯番</dd><!-- /.p-description-list__dd -->
-                </div><!-- /.p-company-information__row -->
-                <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">福利厚生</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">雇用・労災・健康・厚生年金保険、資格取得支援、住宅手当</dd><!-- /.p-description-list__dd -->
-                </div><!-- /.p-company-information__row -->
-                <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">勤務時間</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">8:30〜17:30</dd><!-- /.p-description-list__dd -->
-                </div><!-- /.p-company-information__row -->
-                <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">休日</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">土・日・祝日、夏季、年末年始、有給休暇</dd><!-- /.p-description-list__dd -->
-                </div><!-- /.p-company-information__row -->
-                <div class="p-description-list__row">
-                  <dt class="p-description-list__dt">応募資格</dt><!-- /.p-description-list__dt -->
-                  <dd class="p-description-list__dd">未経験可　手に職を身につけたい方大歓迎</dd><!-- /.p-description-list__dd -->
-                </div><!-- /.p-company-information__row -->
+<?php
+  endwhile;
+endif;
+?>
                 <div class="p-recruit-job-description__btn"><a href="entry.html" class="c-btn-light">エントリー</a></div>
                 <!-- /.p-recruit-job-description__btn -->
               </dl><!-- /.p-company-information__list -->
@@ -131,11 +144,11 @@
 
     <section class="p-recruit-form">
       <div class="p-recruit-form__inner">
-        <a href="entry.html" class="p-recruit-form__link">
+        <a href="<?php echo esc_url( home_url( 'entry' ) ); ?>" class="p-recruit-form__link">
           <div class="p-recruit-from__body">
             <h2 class="p-recruit-form__ttl c-sect-ttl-level2 c-sect-ttl-level2--light">Entry Form<span>エントリーフォーム</span>
             </h2><!-- /.p-recruit-form__ttl -->
-            <div class="p-recruit-form__btn c-btn-more c-btn-more--light">View more</div><!-- /.p-recruit-form__btn -->
+            <div class="p-recruit-form__btn c-btn-more c-btn-more--light">View more<span class="c-btn-more__inline"></span></div><!-- /.p-recruit-form__btn -->
           </div><!-- /.p-recruit-from__inner -->
         </a><!-- /.p-recruit-form__link -->
       </div><!-- /.p-recruit-form__inner -->

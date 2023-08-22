@@ -9,6 +9,14 @@
   }
 }
 
+.p-recruit-job-description__item {
+  display: none;
+
+  &.is-current {
+    display: block;
+  }
+}
+
 .p-recruit-job-description__ttl {
   @include g.font(20, 29, 400);
   letter-spacing: .15em;

@@ -17,12 +17,6 @@
   &:last-child {
     border-bottom: 1px solid #CBCBCB;
   }
-
-  &:first-child {
-    .p-accordion__body {
-      display: block;
-    }
-  }
 }
 
 .p-accordion__head {
@@ -54,13 +48,14 @@
   // アコーディオン開
   &.is-open {
     .p-accordion__icon::after {
-      transform: rotate(90deg);
+      transform: rotate(0);
       transition: .3s;
     }
   }
 }
 
 .p-accordion__icon {
+
   &::before,
   &::after {
     content: '';
@@ -74,7 +69,14 @@
     transform: translateY(-50%);
     transition: .3s;
   }
+
+  &::after {
+    transform: rotate(90deg);
+    transition: .3s;
+  }
 }
+
+
 
 .p-accordion__body {
   display: none;
@@ -99,5 +101,23 @@
       @include g.font(28, 32, 700);
       margin-right: 40px;
     }
+  }
+}
+
+// 最初は初期状態でオープン
+.p-accordion__item {
+  &:first-child {
+    // background: #333;
+
+    .p-accordion__body {
+      display: block;
+    }
+
+    // .p-accordion__head {
+    //   .p-accordion__icon::after {
+    //     transform: rotate(0);
+    //     transition: .3s;
+    //   }
+    // }
   }
 }

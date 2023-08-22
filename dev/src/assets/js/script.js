@@ -1,11 +1,6 @@
 // new LuminousGallery(document.querySelectorAll(".luminous"));
-// console.log('javascript');
-
-
 
 jQuery(function ($) {
-
-
   // アコーディオンメニュー
   $('.js-accordion').on('click', function () {
     // console.log('click')
@@ -46,8 +41,6 @@ jQuery(function ($) {
     return false;
   }));
 
-
-
   // ドロワー
   var drawer = $("#js-drawer-btn");
   drawer.on("click", function () {
@@ -72,6 +65,50 @@ jQuery(function ($) {
         $('#js-parallax').removeClass(showClass);
         // console.log('no-show');
       }
+    }
+
+    // service
+    if (document.URL.match('/service')) {
+      const fixed = 'is-fixed';
+
+      const architecturePosition = $('#js-architecture').offset();
+      let windowHeight = window.outerHeight;
+      // console.log('windowHeight', windowHeight);
+
+      const civilPosition = $('#js-civil').offset();
+      const housingPosition = $('#js-housing').offset();
+      // console.log(scrollTop);
+      // console.log('housing:', housingPosition.top);
+
+      if (scrollTop >= architecturePosition.top && scrollTop < architecturePosition.top + windowHeight) {
+        $('.p-service-sect--architecture').addClass(fixed);
+      } else if (scrollTop < architecturePosition.top) {
+        $('.p-service-sect--architecture').removeClass(fixed);
+      }
+      // console.log(architecturePosition.top + windowHeight)
+      // console.log(civilPosition.top)
+
+      if (scrollTop >= civilPosition.top && scrollTop < civilPosition.top + windowHeight) {
+        $('.p-service-sect--civil').addClass(fixed);
+        // $('.p-service-sect--architecture').removeClass(fixed);
+        console.log("on");
+      } else if (scrollTop < civilPosition.top) {
+        $('.p-service-sect--civil').removeClass(fixed);
+      } else {
+        $('.p-service-sect--civil').removeClass(fixed);
+      }
+
+      if (scrollTop >= housingPosition.top - windowHeight * 1.5 && scrollTop < housingPosition.top) {
+        $('.p-service-sect--housing').addClass(fixed);
+        $('.p-service-sect--architecture').removeClass(fixed);
+      } else if (scrollTop < housingPosition.top) {
+        $('.p-service-sect--housing').removeClass(fixed);
+        // $('.p-service-sect--housing').fadeOut();
+      } else {
+        // $('.p-service-sect--civil').removeClass(fixed);
+        $('.p-service-sect--housing').removeClass(fixed);
+        $('.p-service-sect--civil').removeClass(fixed);
+      };
     }
 
     // works-detail

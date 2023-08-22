@@ -4,12 +4,12 @@
 <?php if(!is_front_page()): ?>
     <div class="p-footer-links">
       <div class="p-footer-links__item p-footer-links__item--contact">
-        <a href="contact.html" class="p-footer-links__link">
+        <a href="<?php echo esc_url( home_url( 'contact' ) ); ?>" class="p-footer-links__link">
           Contact<span>お問い合わせ</span>
         </a><!-- /.p-footer-links__link -->
       </div><!-- /.p-footer-links__item -->
       <div class="p-footer-links__item p-footer-links__item--recruit">
-        <a href="recruit.html" class="p-footer-links__link">
+        <a href="<?php echo esc_url( home_url( 'recruit' ) ); ?>" class="p-footer-links__link">
           Recruit<span>採用情報</span>
         </a><!-- /.p-footer-links__link -->
       </div><!-- /.p-footer-links__item -->
@@ -19,24 +19,16 @@
       <div class="l-inner">
         <div class="p-footer__contents">
           <nav class="p-footer__nav p-footer-nav">
-            <ul class="p-footer-nav__list">
-              <li class="p-footer-nav__item"><a href=""
-                  class="p-footer-nav__link">company</a><!-- /.p-footer-nav__link --></li>
-              <!-- /.p-footer-nav__item -->
-              <li class="p-footer-nav__item"><a href=""
-                  class="p-footer-nav__link">service</a><!-- /.p-footer-nav__link --></li>
-              <!-- /.p-footer-nav__item -->
-              <li class="p-footer-nav__item"><a href=""
-                  class="p-footer-nav__link">works</a><!-- /.p-footer-nav__link --></li><!-- /.p-footer-nav__item -->
-              <li class="p-footer-nav__item"><a href="" class="p-footer-nav__link">news</a><!-- /.p-footer-nav__link -->
-              </li><!-- /.p-footer-nav__item -->
-              <li class="p-footer-nav__item"><a href=""
-                  class="p-footer-nav__link">contact</a><!-- /.p-footer-nav__link --></li>
-              <!-- /.p-footer-nav__item -->
-              <li class="p-footer-nav__item"><a href=""
-                  class="p-footer-nav__link">recruit</a><!-- /.p-footer-nav__link --></li>
-              <!-- /.p-footer-nav__item -->
-            </ul><!-- /.p-footer-nav__list -->
+<?php
+  wp_nav_menu(
+    array (
+      'depth' => 1,
+      'theme_location' => 'footer',
+      'container' => '',
+      'menu_class' => 'p-footer-nav__list',
+    )
+  )
+?>
           </nav><!-- /.p-footer__nav p-footer-nav -->
           <div class="p-footer__logo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo_light.png" alt="藤原建設工業"></div>
           <!-- /.p-footer__logo -->
