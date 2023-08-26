@@ -61,6 +61,8 @@ function get_main_image() {
 function get_main_title() {
   if ( is_page() ):
     return get_the_title();
+  elseif ( is_tax('genre') ):
+    return 'Works';
 	elseif ( is_404() ):
 		return '404 Not Found';
   elseif ( is_single() or is_home() or is_archive() ):
@@ -111,3 +113,9 @@ function get_post_related( $per_page = 5, $post_type = 'post' ) {
 
   return $related_cats_query;
 }
+
+
+// サムネイルサイズ
+add_image_size( 'works-thumbnail', 320, 240, true );
+add_image_size( 'works-detail', 720, 510, true );
+add_image_size( 'works-detail-galley', 340, 340, true );

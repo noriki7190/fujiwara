@@ -39,7 +39,7 @@
             </p><!-- /.p-drawer__info -->
           </address><!-- /.p-access -->
           <div class="p-footer__bottom">
-            <p class="p-footer__privacy"><a href="">Privacy Policy</a></p><!-- /.p-footer-privacy -->
+            <p class="p-footer__privacy"><a href="<?php echo esc_url( home_url( 'privacy-policy' ) ); ?>">Privacy Policy</a></p><!-- /.p-footer-privacy -->
             <small class="p-footer__copyright">© 1995 Fujiwara Construction Industry. Co.,
               Ltd.</small><!-- /.p-footer__copyright -->
           </div><!-- /.p-footer__bottom -->

@@ -1,11 +1,26 @@
 // new LuminousGallery(document.querySelectorAll(".luminous"));
 
 jQuery(function ($) {
+  //　ローディング
+  // $('#js-loading').delay(5000).hide();
+
   // アコーディオンメニュー
   $('.js-accordion').on('click', function () {
     // console.log('click')
     $(this).toggleClass('is-open');
     $(this).next().slideToggle();
+  });
+
+  // recruit tab menu
+  $('.p-recruit-job__link').on('click', function (e) {
+    let index = $('.p-recruit-job__link').index(this);
+    $('.p-recruit-job__link').removeClass('is-current');
+    $(this).addClass('is-current');
+    // $('.p-recruit-job-description__item').removeClass('is-current');
+    $('.p-recruit-job-description__item').hide();
+    // $('.p-recruit-job-description__item').eq(index).addClass('is-current');
+    $('.p-recruit-job-description__item').eq(index).fadeIn('slow');
+    e.preventDefalut();
   });
 
   // メガメニュー

@@ -1,0 +1,23 @@
+@use '../global' as g;
+
+.menu-item-has-children {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 17px;
+
+  &::after {
+    content: '';
+    background: url(../img/arrow-bottom.png) no-repeat center center/contain;
+    position: absolute;
+    // top: 50%;
+    // bottom: 0;
+    right: 0;
+    height: 5px;
+    width: 8px;
+  }
+}
+
+.sub-menu {
+  display: none;
+}

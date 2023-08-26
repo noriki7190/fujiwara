@@ -1,8 +1,6 @@
 @use '../global' as g;
 
-.p-works-detail-contents {
-
-}
+.p-works-detail-contents {}
 
 .p-works-detail-contents__ttl {
   @include g.font(20, 27, 400);
@@ -39,7 +37,17 @@
 }
 
 .p-works-detail-contents__img {
+  // max-width: 720px;
+  // max-height: 520px;
+  // width: 100%;
   margin-top: 32px;
+
+  img {
+    // width: 100%;
+    // height: auto;
+    aspect-ratio: 720 / 520;
+  }
+
   @include g.mq(tab) {
     margin-top: 40px;
   }

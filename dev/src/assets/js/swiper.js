@@ -87,3 +87,27 @@ const swiper_loop = new Swiper('#swiper-loop', {
     delay: 0, // 途切れなくループ
   },
 });
+
+const test_swiper_kv = new Swiper("#test-swiper-kv", {
+  loop: true, // ループさせる
+  parallax: true, // パララックスさせる
+  // allowTouchMove: false, // マウスでのスワイプを禁止
+  speed: 1500, // 少しゆっくり(デフォルトは300)
+  autoplay: { // 自動再生
+    delay: 2000, // 2秒後に次のスライド
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    reverseDirection: true,
+  },
+
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      // 前のスライドのZ軸（奥行）対して(-400px)を設定しています
+      translate: [0, 0, -1],
+    },
+    next: {
+      // 次のスライドのX軸（左右）対して(100%)を設定しています
+      translate: ["100%", 0, 0],
+    },
+  },
+});

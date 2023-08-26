@@ -35,7 +35,7 @@
 <?php
   wp_nav_menu(
     array (
-      'depth' => 1,
+      'depth' => 2,
       'theme_location' => 'global',
       'container' => false,
       'menu_class' => 'p-global-nav__list',
@@ -126,7 +126,7 @@
     </div><!-- /.p-header -->
 
 <?php if( is_front_page() ): ?>
-    <div class="p-loading">
+    <div class="p-loading" id="js-loading">
       <div class="p-loading__logo" id="js-loading-logo">
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-loading.png" alt="">
       </div><!-- /.p-loading__logo -->

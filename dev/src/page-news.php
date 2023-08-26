@@ -46,7 +46,6 @@ endif;
                   <div class="p-news-contents__body">
                     <time class="p-news-contents__date" datetime="<?php the_time('c'); ?>"><?php the_time( 'Y.m.d' ); ?></time><!-- /.p-news-contents__date -->
 <!-- タクソノミー取得 -->
-
                     <span class="p-news-contents__label"><?php echo esc_html( get_the_terms( get_the_ID(), 'news' )[0]->name ); ?></span><!-- /.p-news-contents__label -->
 
                     <h3 class="p-news-contents__ttl"><?php the_title(); ?></h3><!-- /.p-news-contents__ttl -->

@@ -1,0 +1,46 @@
+@use '../global' as g;
+
+// .p-test-kv {
+//   // background: #fff;
+//   position: relative;
+//   overflow: hidden;
+//   height: 100vh;
+
+//   .l-inner {
+//     // max-width: calc(100% - (50% - (660px / 2)));
+//     max-width: calc(100% - (50% - (960px / 2)));
+//     width: calc(100% - 40px);
+//     margin-right: 0;
+//     margin-left: auto;
+//     padding-right: 0;
+//   }
+// }
+
+#wrap {
+  position: relative;
+  width: 320px;
+  height: 180px;
+
+  img {
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+.inner {
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: 1000ms linear;
+}
+
+#wrap img {
+  position: absolute;
+  right: 0;
+}
+
+#wrap.is-show .inner {
+  width: 320px;
+}

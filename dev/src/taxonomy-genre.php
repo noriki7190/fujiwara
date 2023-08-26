@@ -6,26 +6,55 @@
           <div class="p-archive-head__tab">
             <ul class="p-category-tab">
               <li class="p-category-tab__item">
-                <a href="" class="p-category-tab__link is-current">全て</a><!-- /.p-category-tab__link -->
+                <a href="<?php echo esc_url( home_url( 'works' ) ); ?>" class="p-category-tab__link">全て</a><!-- /.p-category-tab__link -->
               </li><!-- /.p-category-tab__item -->
 <?php
   $genre_terms = get_terms( 'genre', array( 'hide_empty' => false ) );
   // var_dump($genre_terms);
   foreach ( $genre_terms as $genre_term ) :
+    if ($term === $genre_term->slug) :
 ?>
+              <li class="p-category-tab__item">
+                <a href="<?php echo get_term_link($genre_term->slug, $genre_term->taxonomy); ?>" class="p-category-tab__link is-current"><?php echo esc_html( $genre_term->name ); ?></a><!-- /.p-category-tab__link -->
+              </li><!-- /.p-category-tab__item -->
+<?php else: ?>
               <li class="p-category-tab__item">
                 <a href="<?php echo get_term_link($genre_term->slug, $genre_term->taxonomy); ?>" class="p-category-tab__link"><?php echo esc_html( $genre_term->name ); ?></a><!-- /.p-category-tab__link -->
               </li><!-- /.p-category-tab__item -->
-<?php endforeach; ?>
+<?php
+  endif;
+endforeach;
+?>
             </ul><!-- /.p-category-tab -->
           </div><!-- /.p-archive-head__tab -->
         </div><!-- /.p-archive-head -->
 
         <div class="p-works-archive__contents">
+<!-- カスタム投稿　daily_works -->
 <?php
-$wp_query = get_entry_posts('daily_works', $per_page= '9');
-	if( $wp_query->have_posts() ):
-    while( $wp_query->have_posts() ) : $wp_query->the_post();
+$terms = get_the_terms($post->ID, 'genre'); // 表示している記事のタクソノミーを取得
+$term_ID = [];
+
+foreach ((array) $terms as $term):
+    array_push($term_ID, $term->term_id); // タクソノミーのIDを格納
+endforeach;
+
+$args = [
+    'post_type' => 'daily_works', //カスタム投稿タイプ名
+    'post__not_in' => [$post->ID], // 今読んでいる記事を除く
+    'posts_per_page' => 5, // 表示させたい記事数
+    // 'orderby' => 'rand', // ランダムに表示、降順の場合は'desc'
+    'tax_query' => [ // タクソノミーに関連付けられた投稿を表示
+        [
+            'taxonomy' => 'genre', // タクソノミー名
+            'terms' => $term_ID, // タクソノミーターム
+        ],
+    ],
+];
+$wp_query = new WP_Query($args);
+
+if ($wp_query->have_posts()):
+  while ($wp_query->have_posts()) : $wp_query->the_post();
 ?>
           <article class="p-works-archive__item p-works-card">
             <a href="<?php the_permalink(); ?>" class="p-works-card__link">

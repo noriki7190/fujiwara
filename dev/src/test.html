@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
   <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -19,85 +22,26 @@
 </head>
 
 <body>
-  <div class="p-loading">
-    <div class="p-loading__logo" id="js-loading-logo">
-      <img src="./assets/img/logo-loading.png" alt="">
-    </div><!-- /.p-loading__logo -->
-    <div class="l-inner">
-      <div class="p-loading__catch-copy">
-        <span class="u-each-txt-anime u-each-txt-anime--loading">How Far</span><br><span
-          class="u-each-txt-anime u-each-txt-anime--loading">Can <br class="u-is-sp">We Go?</span>
-      </div><!-- /.p-loading__catch-copy -->
-
-    </div><!-- /.l-inner -->
-    <div class="p-loading__bg-green"></div><!-- /.p-loading__bg-green -->
-    <div class="p-loading__bg-white"></div><!-- /.p-loading__bg-white -->
-  </div><!-- /.p-loading -->
-
   <div class="p-header__kv">
-    <div class="p-kv">
+    <div class="p-test-kv">
       <div class="l-inner">
-        <div class="swiper" id="swiper-kv">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <p class="p-kv__business u-each-txt-anime">Architecture</p><!-- /.p-kv__business -->
-              <figure class="p-kv__img" data-swiper-parallax-x="0%"><img src="./assets/img/kv_slider01.png" alt=""></figure><!-- /.p-kv__img -->
-            </div><!-- /.p-kv__slider -->
-            <div class="swiper-slide">
-              <p class="p-kv__business u-each-txt-anime">Civil Engineering</p><!-- /.p-kv__business -->
-              <figure class="p-kv__img" data-swiper-parallax-x="0%"><img src="./assets/img/kv_slider02.png" alt=""></figure><!-- /.p-kv__img -->
-            </div><!-- /.p-kv__slider -->
-            <div class="swiper-slide">
-              <p class="p-kv__business u-each-txt-anime">Housing</p><!-- /.p-kv__business -->
-              <figure class="p-kv__img" data-swiper-parallax-x="0%"><img src="./assets/img/kv_slider03.png" alt=""></figure><!-- /.p-kv__img -->
-            </div><!-- /.p-kv__slider -->
-          </div><!-- /.swiper-wrapper -->
-        </div><!-- /.swiper -->
-      </div><!-- /.l-inner -->
-    </div><!-- /.p-kv -->
+        <div id="wrap">
+          <div class="inner">
+            <img src="./assets/img/kv_slider01.jpg" alt="" />
+          </div>
+
+      </div>
+    </div><!-- /.l-inner -->
+  </div><!-- /.p-test-kv -->
   </div><!-- /.p-header__kv -->
 
-  <div class="p-loop-slider">
-    <div class="swiper" id="swiper-loop">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img01.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img02.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img03.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img04.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img05.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img01.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img02.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img03.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img04.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/home/home_slider_img05.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-  </div><!-- /.p-loop-slider -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./assets/js/swiper.js"></script>
   <!-- <script src="./assets/js/lihtbox.min.js"></script> -->
   <script src="./assets/js/luminous.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./assets/js/slider.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 

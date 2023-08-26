@@ -67,11 +67,14 @@ endif;
         <!-- /.p-recruit-faq__ttl -->
         <div class="p-recruit-job__tab">
           <ul class="p-recruit-job-tab">
-            <li class="p-recruit-job-tab__item is-current">建設業務</li>
+            <li class="p-recruit-job-tab__item"><a
+                class="p-recruit-job__link is-current">建設業務</a><!-- /.p-recruit-job__link --></li>
             <!-- /.p-recruit-job-tab__item -->
-            <li class="p-recruit-job-tab__item">事務業務</li>
+            <li class="p-recruit-job-tab__item"><a
+                class="p-recruit-job__link">事務業務</a><!-- /.p-recruit-job__link --></li>
             <!-- /.p-recruit-job-tab__item -->
-            <li class="p-recruit-job-tab__item">営業業務</li>
+            <li class="p-recruit-job-tab__item"><a
+                class="p-recruit-job__link">営業業務</a><!-- /.p-recruit-job__link --></li>
             <!-- /.p-recruit-job-tab__item -->
           </ul><!-- /.p-recruit-job-tab -->
         </div><!-- /.p-recruit-job__tab -->
@@ -92,7 +95,7 @@ if( have_rows('construction') ):
   endwhile;
 endif;
 ?>
-                <div class="p-recruit-job-description__btn"><a href="entry.html" class="c-btn-light">エントリー</a></div>
+                <div class="p-recruit-job-description__btn"><a href="<?php echo esc_url( home_url( 'entry' ) ); ?>" class="c-btn-light">エントリー</a></div>
                 <!-- /.p-recruit-job-description__btn -->
               </dl><!-- /.p-company-information__list -->
             </li><!-- /.p-recruit-job-description__item -->
@@ -112,7 +115,7 @@ if( have_rows('office') ):
   endwhile;
 endif;
 ?>
-                <div class="p-recruit-job-description__btn"><a href="entry.html" class="c-btn-light">エントリー</a></div>
+                <div class="p-recruit-job-description__btn"><a href="<?php echo esc_url( home_url( 'entry' ) ); ?>" class="c-btn-light">エントリー</a></div>
                 <!-- /.p-recruit-job-description__btn -->
               </dl><!-- /.p-company-information__list -->
             </li><!-- /.p-recruit-job-description__item -->
@@ -132,7 +135,7 @@ if( have_rows('sales') ):
   endwhile;
 endif;
 ?>
-                <div class="p-recruit-job-description__btn"><a href="entry.html" class="c-btn-light">エントリー</a></div>
+                <div class="p-recruit-job-description__btn"><a href="<?php echo esc_url( home_url( 'entry' ) ); ?>" class="c-btn-light">エントリー</a></div>
                 <!-- /.p-recruit-job-description__btn -->
               </dl><!-- /.p-company-information__list -->
             </li><!-- /.p-recruit-job-description__item -->

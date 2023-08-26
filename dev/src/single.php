@@ -8,7 +8,14 @@
             <time class="p-detail-head__date" datetime="<?php the_time('c'); ?>"><?php the_time( 'Y.m.d' ); ?></time><!-- /.p-detail-head__date -->
             <div class="p-detail-head__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'news' )[0]->name ); ?></div><!-- /.p-detail-head__category -->
           </div><!-- /.p-detail-head__meta -->
-          <figure class="p-detail-head__img"><?php the_post_thumbnail(); ?></figure><!-- /.p-detail-head__img -->
+          <figure class="p-detail-head__img">
+<?php if ( the_post_thumbnail() ): ?>
+            <?php the_post_thumbnail(); ?>
+<?php else: ?>
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/noimg.png" alt="">
+<?php endif; ?>
+          </figure><!-- /.p-detail-head__img -->
+
         </div><!-- /.p-detail-head -->
         <div class="p-news-detail__contents p-post-contents">
 <?php

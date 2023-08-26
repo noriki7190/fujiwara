@@ -5,6 +5,22 @@
   position: fixed;
   z-index: #{map-get(g.$layer, header)};
   top: 0;
+  // transform: translateY(-100%);
+  // animation-name: fadeIn;
+  animation-delay: 5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .p-header__inner {
@@ -15,6 +31,8 @@
   width: 100%;
   margin: 0 auto;
   padding: 20px 20px 0;
+  position: relative;
+  z-index: #{map-get(g.$layer, header)};
 
   @include g.mq(tab) {
     padding: 40px 40px 0;

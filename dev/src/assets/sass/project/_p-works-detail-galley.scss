@@ -12,5 +12,11 @@
   @include g.mq(tab) {
     gap: 40px;
   }
+}
 
+.p-works-detail-galley__img {
+  img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+  }
 }

@@ -16,9 +16,11 @@
 
   h2 {
     @include g.font(20, 28, 400);
+    margin-top: 56px;
 
     @include g.mq(tab) {
       @include g.font(28, 47, 400);
+      margin-top: 80px;
     }
   }
 
@@ -35,5 +37,20 @@
   p {
     @include g.font(15, 28, 400);
     margin-top: 25px;
+  }
+
+  ol {
+    padding-left: 25px;
+    margin-top: 20px;
+
+    @include g.mq(tab) {
+      margin-top: 31px;
+    }
+
+    li {
+      @include g.font(15, 34, 400);
+      letter-spacing: .15em;
+      list-style-type: decimal;
+    }
   }
 }
